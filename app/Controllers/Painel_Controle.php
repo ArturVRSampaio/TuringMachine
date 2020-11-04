@@ -1,9 +1,9 @@
 <?php namespace App\Controllers;
 
-class Controle extends BaseController
+class Painel_Controle extends BaseController
 {
     function __construct() {
-        return view('Controle_View.php');
+        return view('Painel_Controle_View.php');
     }
 
 
