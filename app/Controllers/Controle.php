@@ -2,9 +2,13 @@
 
 class Controle extends BaseController
 {
-	public function index()
+    function __construct() {
+        return view('Controle_View.php');
+    }
+
+
+    public function index()
 	{
-		return view('Controle_View.php');
 	}
 
 	//--------------------------------------------------------------------
