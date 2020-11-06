@@ -1,0 +1,90 @@
+CRITICAL - 2020-11-03 20:14:06 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:14:30 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:18:22 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:18:29 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:18:30 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:19:53 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:19:54 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:19:55 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:20:02 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-03 20:20:03 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

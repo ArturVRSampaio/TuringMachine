@@ -1,0 +1,104 @@
+CRITICAL - 2020-11-06 14:48:26 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-06 14:48:33 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-06 14:50:39 --> Call to a member function view() on null
+#0 C:\xampp\htdocs\Turing2\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Turing2\system\Common.php(1119): CodeIgniter\View\View->render('Painel_Controle...', Array, true)
+#2 C:\xampp\htdocs\Turing2\app\Controllers\Painel_Controle.php(6): view('Painel_Controle...')
+#3 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(890): App\Controllers\Painel_Controle->__construct()
+#4 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-06 14:53:27 --> Class 'App\Controllers\BaseController' not found
+#0 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(365): require_once()
+#1 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#6 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-06 14:53:29 --> Class 'App\Controllers\BaseController' not found
+#0 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(365): require_once()
+#1 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#6 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-06 14:58:12 --> Class 'App\Controllers\BaseController' not found
+#0 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(365): require_once()
+#1 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#6 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-06 14:58:34 --> Class 'App\Controllers\BaseController' not found
+#0 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(365): require_once()
+#1 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#6 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-06 15:01:23 --> Class 'App\Controllers\BaseController' not found
+#0 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(365): require_once()
+#1 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#6 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-06 15:01:27 --> Class 'App\Controllers\BaseController' not found
+#0 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(365): require_once()
+#1 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#6 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-06 15:01:33 --> Class 'App\Controllers\BaseController' not found
+#0 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(365): require_once()
+#1 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Turing2\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
+#6 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\Turing2\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Turing2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
