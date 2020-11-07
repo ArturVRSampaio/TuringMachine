@@ -3,12 +3,12 @@
 class Painel_Controle extends BaseController
 {
     function __construct() {
-        return view('Painel_Controle_View.php');
     }
 
 
     public function index()
 	{
+        return view('Painel_Controle_View.php');
 	}
 
 	//--------------------------------------------------------------------

@@ -1,23 +1,35 @@
-
-<?php
-//Incluindo Header
-$this->load->view('Base_View.php');
-?>
+<!DOCTYPE html>
 
 
+<?= $this->include('Base_View') ?>
+<body>
+
+<!-- CONTENT -->
+
+<section>
+
+	<h1>About this page</h1>
+
+	<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+
+	<p>If you would like to edit this page you will find it located at:</p>
+
+	<pre><code>app/Views/welcome_message.php</code></pre>
+
+	<p>The corresponding controller for this page can be found at:</p>
+
+	<pre><code>app/Controllers/Home.php</code></pre>
+
+</section>
 
 
-<script type= 'text/javascript'>
 
-$(document).ready(function () {
-
-}
+<!-- SCRIPTS -->
+<script>
 
 
 </script>
+<!-- -->
 
-
-<?php
-//Incluindo Rodapé
-//$this->load->view('rodape.php');
-?>
+</body>
+</html>
