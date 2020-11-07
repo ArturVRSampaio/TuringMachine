@@ -1,5 +1,21 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+// competencias de uma MQT:
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 $nDebugLevel = null; $bFullSpeed = null; $bIsReset = null; $sTape = null; $nTapeOffset = null; $nHeadPosition = null; $sState = null; $nSteps = null; $nVariant = null; $hRunTimer = null; $aProgram = null; $nMaxUndo = null; $aUndoList = null; $nTextareaLines = null; $oTextarea = null; $bIsDirty = null; $oNextLineMarker = null; $oPrevLineMarker = null; $oPrevInstruction = null; $sPreviousStatusMsg = null;
 $Step = new Func("Step", function() use (&$bIsDirty, &$Compile, &$bIsReset, &$sState, &$SetStatusMessage, &$EnableControls, &$GetTapeSymbol, &$nHeadPosition, &$GetNextInstructions, &$nVariant, &$Math, &$debug, &$nMaxUndo, &$aUndoList, &$SetTapeSymbol, &$nSteps, &$oPrevInstruction, &$sTape, &$UpdateInterface) {
   $sNewState = null; $sNewSymbol = null; $nAction = null; $nLineNumber = null; $sHeadSymbol = null; $aInstructions = null; $oInstruction = null;
