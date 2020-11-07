@@ -13,11 +13,11 @@
 
           <!-- Github -->
           <a class="gh-ic">
-            <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          <i class="fab fa-github fa-lg white-text fa-2x"> </i><a href="https://github.com/ArturVRSampaio/TuringMachine"> Github</a>
           </a>
           <!-- TCC Doc -->
           <a class="tw-ic">
-            <i class="fas fa-file-alt fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            <i class="fas fa-file-alt fa-lg white-text fa-2x"> </i><a href="https://github.com/ArturVRSampaio/TuringMachine"> Documentação</a>
           </a>
         </div>
       </div>

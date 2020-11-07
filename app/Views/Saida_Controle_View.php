@@ -12,7 +12,9 @@
 href="<?php echo base_url();?>/home">
 Voltar a Home</a>
 
-
+<a  type="button" class="btn btn-primary" 
+href="<?php echo base_url();?>/home">
+Calcular</a>
 
 
 <div class="container-fluid">
