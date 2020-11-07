@@ -6,11 +6,11 @@
 <body>
 
 <!-- CONTENT -->
-
-<a  type="button" class="btn btn-primary" 
-href="<?php echo base_url();?>/controle">
-ir para o painel de controle</a>
-
+<div class="container-fluid mt-4 mb-4">
+	<a  type="button" class="btn btn-primary" 
+	href="<?php echo base_url();?>/controle">
+	Ir para o painel de entrada</a>
+</div>
 
 <!--  -->
 <div class="row">

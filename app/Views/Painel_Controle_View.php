@@ -9,7 +9,7 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid mt-4">
 	<div class="row">
 		<div class="col-md-2">
 		</div>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                   <label for="Entrada">Entrada</label>
-                  <input class="form-control" id="Entrada" placeholder="Entrada">
+                  <input class="form-control mb-4" id="Entrada" placeholder="Entrada">
                 
 			</form>
             <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary">Enviar</button>
