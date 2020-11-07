@@ -1,3 +1,5 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 $nDebugLevel = null; $bFullSpeed = null; $bIsReset = null; $sTape = null; $nTapeOffset = null; $nHeadPosition = null; $sState = null; $nSteps = null; $nVariant = null; $hRunTimer = null; $aProgram = null; $nMaxUndo = null; $aUndoList = null; $nTextareaLines = null; $oTextarea = null; $bIsDirty = null; $oNextLineMarker = null; $oPrevLineMarker = null; $oPrevInstruction = null; $sPreviousStatusMsg = null;
 $Step = new Func("Step", function() use (&$bIsDirty, &$Compile, &$bIsReset, &$sState, &$SetStatusMessage, &$EnableControls, &$GetTapeSymbol, &$nHeadPosition, &$GetNextInstructions, &$nVariant, &$Math, &$debug, &$nMaxUndo, &$aUndoList, &$SetTapeSymbol, &$nSteps, &$oPrevInstruction, &$sTape, &$UpdateInterface) {
   $sNewState = null; $sNewSymbol = null; $nAction = null; $nLineNumber = null; $sHeadSymbol = null; $aInstructions = null; $oInstruction = null;
@@ -119,9 +121,9 @@ $StopTimer = new Func("StopTimer", function() use (&$hRunTimer, &$window) {
     $hRunTimer = Object::$null;
   }
 });
-$Reset = new Func("Reset", function() use (&$«24», &$nHeadPosition, &$sTape, &$nTapeOffset, &$sState, &$nVariant, &$Number, &$SetupVariantCSS, &$nSteps, &$bIsReset, &$Compile, &$oPrevInstruction, &$aUndoList, &$ShowResetMsg, &$EnableControls, &$UpdateInterface) {
+$Reset = new Func("Reset", function() use (&$ï¿½24ï¿½, &$nHeadPosition, &$sTape, &$nTapeOffset, &$sState, &$nVariant, &$Number, &$SetupVariantCSS, &$nSteps, &$bIsReset, &$Compile, &$oPrevInstruction, &$aUndoList, &$ShowResetMsg, &$EnableControls, &$UpdateInterface) {
   $sInitialTape = null; $sInitialState = null; $dropdown = null;
-  $sInitialTape = get(get(call($«24», "#InitialInput"), 0.0), "value");
+  $sInitialTape = get(get(call($ï¿½24ï¿½, "#InitialInput"), 0.0), "value");
   $nHeadPosition = call_method($sInitialTape, "indexOf", "*");
   if (eq($nHeadPosition, -1.0)) {
     $nHeadPosition = 0.0;
@@ -132,13 +134,13 @@ $Reset = new Func("Reset", function() use (&$«24», &$nHeadPosition, &$sTape, &$n
   }
   $sTape = $sInitialTape;
   $nTapeOffset = 0.0;
-  $sInitialState = get(get(call($«24», "#InitialState"), 0.0), "value");
-  $sInitialState = get(call_method(call_method($«24», "trim", $sInitialState), "split", new RegExp("\\s+", "")), 0.0);
+  $sInitialState = get(get(call($ï¿½24ï¿½, "#InitialState"), 0.0), "value");
+  $sInitialState = get(call_method(call_method($ï¿½24ï¿½, "trim", $sInitialState), "split", new RegExp("\\s+", "")), 0.0);
   if (not($sInitialState) || eq($sInitialState, "")) {
     $sInitialState = "0";
   }
   $sState = $sInitialState;
-  $dropdown = get(call($«24», "#MachineVariant"), 0.0);
+  $dropdown = get(call($ï¿½24ï¿½, "#MachineVariant"), 0.0);
   $nVariant = call($Number, get(get(get($dropdown, "options"), get($dropdown, "selectedIndex")), "value"));
   call($SetupVariantCSS);
   $nSteps = 0.0;
@@ -156,7 +158,7 @@ $createTuringInstructionFromTuple = new Func("createTuringInstructionFromTuple",
 $isArray = new Func("isArray", function($possiblyArr = null) use (&$Object) {
   call_method(get(get($Object, "prototype"), "toString"), "call", $possiblyArr) === "[object Array]";
 });
-$Compile = new Func("Compile", function() use (&$oTextarea, &$debug, &$SetSyntaxMessage, &$ClearErrorLines, &$aProgram, &$Object, &$ParseLine, &$nVariant, &$SetErrorLine, &$createTuringInstructionFromTuple, &$oRegExp, &$RegExp, &$aResult, &$parseInt, &$nDebugLevel, &$«24», &$oPrevInstruction, &$bIsDirty, &$UpdateInterface) {
+$Compile = new Func("Compile", function() use (&$oTextarea, &$debug, &$SetSyntaxMessage, &$ClearErrorLines, &$aProgram, &$Object, &$ParseLine, &$nVariant, &$SetErrorLine, &$createTuringInstructionFromTuple, &$oRegExp, &$RegExp, &$aResult, &$parseInt, &$nDebugLevel, &$ï¿½24ï¿½, &$oPrevInstruction, &$bIsDirty, &$UpdateInterface) {
   $sSource = null; $aLines = null; $i = null; $oTuple = null; $nNewDebugLevel = null;
   $sSource = get($oTextarea, "value");
   call($debug, 2.0, "Compile()");
@@ -200,7 +202,7 @@ $Compile = new Func("Compile", function() use (&$oTextarea, &$debug, &$SetSyntax
       $nDebugLevel = call($parseInt, get($aResult, 1.0));
       call($debug, 1.0, _concat("Setting debug level to ", $nDebugLevel));
       if ($nDebugLevel > 0.0) {
-        call_method(call($«24», ".DebugClass"), "toggle", true);
+        call_method(call($ï¿½24ï¿½, ".DebugClass"), "toggle", true);
       }
     }
   }
@@ -334,10 +336,10 @@ $SetTapeSymbol = new Func("SetTapeSymbol", function($n = null, $c = null) use (&
 
 
 });
-$SaveMachineSnapshot = new Func("SaveMachineSnapshot", function() use (&$sState, &$sTape, &$nTapeOffset, &$nHeadPosition, &$nSteps, &$bFullSpeed, &$nVariant, &$oTextarea, &$«24») {
-  return new Object("program", get($oTextarea, "value"), "state", $sState, "tape", $sTape, "tapeoffset", $nTapeOffset, "headposition", $nHeadPosition, "steps", $nSteps, "initialtape", get(get(call($«24», "#InitialInput"), 0.0), "value"), "initialstate", get(get(call($«24», "#InitialState"), 0.0), "value"), "fullspeed", $bFullSpeed, "variant", $nVariant, "version", 1.0);
+$SaveMachineSnapshot = new Func("SaveMachineSnapshot", function() use (&$sState, &$sTape, &$nTapeOffset, &$nHeadPosition, &$nSteps, &$bFullSpeed, &$nVariant, &$oTextarea, &$ï¿½24ï¿½) {
+  return new Object("program", get($oTextarea, "value"), "state", $sState, "tape", $sTape, "tapeoffset", $nTapeOffset, "headposition", $nHeadPosition, "steps", $nSteps, "initialtape", get(get(call($ï¿½24ï¿½, "#InitialInput"), 0.0), "value"), "initialstate", get(get(call($ï¿½24ï¿½, "#InitialState"), 0.0), "value"), "fullspeed", $bFullSpeed, "variant", $nVariant, "version", 1.0);
 });
-$LoadMachineSnapshot = new Func("LoadMachineSnapshot", function($oObj = null) use (&$debug, &$oTextarea, &$sState, &$sTape, &$nTapeOffset, &$nHeadPosition, &$nSteps, &$«24», &$bFullSpeed, &$nVariant, &$VariantChanged, &$SetupVariantCSS, &$aUndoList, &$SetStatusMessage, &$EnableControls, &$TextareaChanged, &$Compile, &$UpdateInterface) {
+$LoadMachineSnapshot = new Func("LoadMachineSnapshot", function($oObj = null) use (&$debug, &$oTextarea, &$sState, &$sTape, &$nTapeOffset, &$nHeadPosition, &$nSteps, &$ï¿½24ï¿½, &$bFullSpeed, &$nVariant, &$VariantChanged, &$SetupVariantCSS, &$aUndoList, &$SetStatusMessage, &$EnableControls, &$TextareaChanged, &$Compile, &$UpdateInterface) {
   if (is(get($oObj, "version")) && !eq(get($oObj, "version"), 1.0)) {
     call($debug, 1.0, _concat("Warning: saved machine has unknown version number ", get($oObj, "version")));
   }
@@ -360,16 +362,16 @@ $LoadMachineSnapshot = new Func("LoadMachineSnapshot", function($oObj = null) us
     $nSteps = get($oObj, "steps");
   }
   if (is(get($oObj, "initialtape"))) {
-    set(get(call($«24», "#InitialInput"), 0.0), "value", get($oObj, "initialtape"));
+    set(get(call($ï¿½24ï¿½, "#InitialInput"), 0.0), "value", get($oObj, "initialtape"));
   }
   if (is(get($oObj, "initialstate"))) {
-    set(get(call($«24», "#InitialState"), 0.0), "value", get($oObj, "initialstate"));
+    set(get(call($ï¿½24ï¿½, "#InitialState"), 0.0), "value", get($oObj, "initialstate"));
   } else {
-    set(get(call($«24», "#InitialState"), 0.0), "value", "");
+    set(get(call($ï¿½24ï¿½, "#InitialState"), 0.0), "value", "");
   }
 
   if (is(get($oObj, "fullspeed"))) {
-    set(get(call($«24», "#SpeedCheckbox"), 0.0), "checked", get($oObj, "fullspeed"));
+    set(get(call($ï¿½24ï¿½, "#SpeedCheckbox"), 0.0), "checked", get($oObj, "fullspeed"));
     $bFullSpeed = get($oObj, "fullspeed");
   }
   if (is(get($oObj, "variant"))) {
@@ -378,7 +380,7 @@ $LoadMachineSnapshot = new Func("LoadMachineSnapshot", function($oObj = null) us
     $nVariant = 0.0;
   }
 
-  call_method(call($«24», "#MachineVariant"), "val", $nVariant);
+  call_method(call($ï¿½24ï¿½, "#MachineVariant"), "val", $nVariant);
   call($VariantChanged, false);
   call($SetupVariantCSS);
   $aUndoList = new Arr();
@@ -394,22 +396,22 @@ $LoadMachineSnapshot = new Func("LoadMachineSnapshot", function($oObj = null) us
   call($Compile);
   call($UpdateInterface);
 });
-$SetStatusMessage = new Func("SetStatusMessage", function($sString = null, $nBgFlash = null) use (&$«24», &$sPreviousStatusMsg) {
-  call_method(call($«24», "#MachineStatusMsgText"), "text", $sString);
+$SetStatusMessage = new Func("SetStatusMessage", function($sString = null, $nBgFlash = null) use (&$ï¿½24ï¿½, &$sPreviousStatusMsg) {
+  call_method(call($ï¿½24ï¿½, "#MachineStatusMsgText"), "text", $sString);
   if ($nBgFlash > 0.0) {
-    call_method(call_method(call_method(call_method(call($«24», "#MachineStatusMsgBg"), "stop", true, true), "css", "background-color", eq($nBgFlash, 1.0) ? "#c9f2c9" : "#ffb3b3"), "show"), "fadeOut", 600.0);
+    call_method(call_method(call_method(call_method(call($ï¿½24ï¿½, "#MachineStatusMsgBg"), "stop", true, true), "css", "background-color", eq($nBgFlash, 1.0) ? "#c9f2c9" : "#ffb3b3"), "show"), "fadeOut", 600.0);
   }
   if (!eq($sString, "") && eq($sPreviousStatusMsg, $sString) && !eq($nBgFlash, -1.0)) {
-    call_method(call_method(call_method(call_method(call($«24», "#MachineStatusMsgBg"), "stop", true, true), "css", "background-color", "#bbf8ff"), "show"), "fadeOut", 600.0);
+    call_method(call_method(call_method(call_method(call($ï¿½24ï¿½, "#MachineStatusMsgBg"), "stop", true, true), "css", "background-color", "#bbf8ff"), "show"), "fadeOut", 600.0);
   }
   if (!eq($sString, "")) {
     $sPreviousStatusMsg = $sString;
   }
 });
-$SetSyntaxMessage = new Func("SetSyntaxMessage", function($msg = null) use (&$«24») {
-  call_method(call($«24», "#SyntaxMsg"), "text", is($msg) ? $msg : "");
+$SetSyntaxMessage = new Func("SetSyntaxMessage", function($msg = null) use (&$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, "#SyntaxMsg"), "text", is($msg) ? $msg : "");
 });
-$RenderTape = new Func("RenderTape", function() use (&$nHeadPosition, &$nTapeOffset, &$debug, &$sTape, &$repeat, &$«24») {
+$RenderTape = new Func("RenderTape", function() use (&$nHeadPosition, &$nTapeOffset, &$debug, &$sTape, &$repeat, &$ï¿½24ï¿½) {
   $nTranslatedHeadPosition = null; $sFirstPart = null; $sHeadSymbol = null; $sSecondPart = null;
   $nTranslatedHeadPosition = to_number($nHeadPosition) - to_number($nTapeOffset);
   call($debug, 4.0, _concat("RenderTape: translated head pos: ", $nTranslatedHeadPosition, "  head pos: ", $nHeadPosition, "  tape offset: ", $nTapeOffset));
@@ -442,25 +444,25 @@ $RenderTape = new Func("RenderTape", function() use (&$nHeadPosition, &$nTapeOff
 
   $sSecondPart = call_method($sSecondPart, "replace", new RegExp("_", "g"), " ");
   call($debug, 4.0, _concat("RenderTape: sFirstPart = '", $sFirstPart, "' sHeadSymbol = '", $sHeadSymbol, "'  sSecondPart = '", $sSecondPart, "'"));
-  call_method(call($«24», "#LeftTape"), "text", $sFirstPart);
-  call_method(call($«24», "#ActiveTape"), "text", $sHeadSymbol);
-  call_method(call($«24», "#RightTape"), "text", $sSecondPart);
-  if (get(call_method(call($«24», "#ActiveTapeArea"), "position"), "left") < 0.0) {
-    call_method(call($«24», "#MachineTape"), "scrollLeft", to_number(_plus(call_method(call($«24», "#MachineTape"), "scrollLeft"), get(call_method(call($«24», "#ActiveTapeArea"), "position"), "left"))) - 10.0);
-  } else if (_plus(get(call_method(call($«24», "#ActiveTapeArea"), "position"), "left"), call_method(call($«24», "#ActiveTapeArea"), "width")) > call_method(call($«24», "#MachineTape"), "width")) {
-    call_method(call($«24», "#MachineTape"), "scrollLeft", _plus(call_method(call($«24», "#MachineTape"), "scrollLeft"), (to_number(get(call_method(call($«24», "#ActiveTapeArea"), "position"), "left")) - to_number(call_method(call($«24», "#MachineTape"), "width"))), 10.0));
+  call_method(call($ï¿½24ï¿½, "#LeftTape"), "text", $sFirstPart);
+  call_method(call($ï¿½24ï¿½, "#ActiveTape"), "text", $sHeadSymbol);
+  call_method(call($ï¿½24ï¿½, "#RightTape"), "text", $sSecondPart);
+  if (get(call_method(call($ï¿½24ï¿½, "#ActiveTapeArea"), "position"), "left") < 0.0) {
+    call_method(call($ï¿½24ï¿½, "#MachineTape"), "scrollLeft", to_number(_plus(call_method(call($ï¿½24ï¿½, "#MachineTape"), "scrollLeft"), get(call_method(call($ï¿½24ï¿½, "#ActiveTapeArea"), "position"), "left"))) - 10.0);
+  } else if (_plus(get(call_method(call($ï¿½24ï¿½, "#ActiveTapeArea"), "position"), "left"), call_method(call($ï¿½24ï¿½, "#ActiveTapeArea"), "width")) > call_method(call($ï¿½24ï¿½, "#MachineTape"), "width")) {
+    call_method(call($ï¿½24ï¿½, "#MachineTape"), "scrollLeft", _plus(call_method(call($ï¿½24ï¿½, "#MachineTape"), "scrollLeft"), (to_number(get(call_method(call($ï¿½24ï¿½, "#ActiveTapeArea"), "position"), "left")) - to_number(call_method(call($ï¿½24ï¿½, "#MachineTape"), "width"))), 10.0));
   }
 
 });
-$RenderState = new Func("RenderState", function() use (&$sState, &$«24») {
-  call_method(call($«24», "#MachineState"), "text", $sState);
+$RenderState = new Func("RenderState", function() use (&$sState, &$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, "#MachineState"), "text", $sState);
 });
-$RenderSteps = new Func("RenderSteps", function() use (&$nSteps, &$«24») {
-  call_method(call($«24», "#MachineSteps"), "text", $nSteps);
+$RenderSteps = new Func("RenderSteps", function() use (&$nSteps, &$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, "#MachineSteps"), "text", $nSteps);
 });
-$RenderLineMarkers = new Func("RenderLineMarkers", function() use (&$«24», &$GetNextInstructions, &$sState, &$GetTapeSymbol, &$nHeadPosition, &$debug, &$oPrevInstruction, &$SetActiveLines) {
+$RenderLineMarkers = new Func("RenderLineMarkers", function() use (&$ï¿½24ï¿½, &$GetNextInstructions, &$sState, &$GetTapeSymbol, &$nHeadPosition, &$debug, &$oPrevInstruction, &$SetActiveLines) {
   $oNextList = null;
-  $oNextList = call_method($«24», "map", call($GetNextInstructions, $sState, call($GetTapeSymbol, $nHeadPosition)), new Func(function($x = null) {
+  $oNextList = call_method($ï¿½24ï¿½, "map", call($GetNextInstructions, $sState, call($GetTapeSymbol, $nHeadPosition)), new Func(function($x = null) {
     return get($x, "sourceLineNumber");
   }));
   call($debug, 3.0, _concat("Rendering line markers: ", $oNextList, " ", is($oPrevInstruction) ? get($oPrevInstruction, "sourceLineNumber") : -1.0));
@@ -472,10 +474,10 @@ $UpdateInterface = new Func("UpdateInterface", function() use (&$RenderTape, &$R
   call($RenderSteps);
   call($RenderLineMarkers);
 });
-$ClearDebug = new Func("ClearDebug", function() use (&$«24») {
-  call_method(call($«24», "#debug"), "empty");
+$ClearDebug = new Func("ClearDebug", function() use (&$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, "#debug"), "empty");
 });
-$EnableControls = new Func("EnableControls", function($bStep = null, $bRun = null, $bStop = null, $bReset = null, $bSpeed = null, $bTextarea = null, $bUndo = null) use (&$document, &$EnableUndoButton, &$«24») {
+$EnableControls = new Func("EnableControls", function($bStep = null, $bRun = null, $bStop = null, $bReset = null, $bSpeed = null, $bTextarea = null, $bUndo = null) use (&$document, &$EnableUndoButton, &$ï¿½24ï¿½) {
   set(call_method($document, "getElementById", "StepButton"), "disabled", not($bStep));
   set(call_method($document, "getElementById", "RunButton"), "disabled", not($bRun));
   set(call_method($document, "getElementById", "StopButton"), "disabled", not($bStop));
@@ -484,9 +486,9 @@ $EnableControls = new Func("EnableControls", function($bStep = null, $bRun = nul
   set(call_method($document, "getElementById", "Source"), "disabled", not($bTextarea));
   call($EnableUndoButton, $bUndo);
   if (is($bSpeed)) {
-    call_method(call($«24», "#SpeedCheckboxLabel"), "removeClass", "disabled");
+    call_method(call($ï¿½24ï¿½, "#SpeedCheckboxLabel"), "removeClass", "disabled");
   } else {
-    call_method(call($«24», "#SpeedCheckboxLabel"), "addClass", "disabled");
+    call_method(call($ï¿½24ï¿½, "#SpeedCheckboxLabel"), "addClass", "disabled");
   }
 
 });
@@ -516,42 +518,42 @@ $ResetButton = new Func("ResetButton", function() use (&$SetStatusMessage, &$Res
   call($Reset);
   call($EnableControls, true, true, false, true, true, true, false);
 });
-$SpeedCheckbox = new Func("SpeedCheckbox", function() use (&$bFullSpeed, &$«24») {
-  $bFullSpeed = get(get(call($«24», "#SpeedCheckbox"), 0.0), "checked");
+$SpeedCheckbox = new Func("SpeedCheckbox", function() use (&$bFullSpeed, &$ï¿½24ï¿½) {
+  $bFullSpeed = get(get(call($ï¿½24ï¿½, "#SpeedCheckbox"), 0.0), "checked");
 });
-$VariantChanged = new Func("VariantChanged", function($needWarning = null) use (&$«24», &$Number, &$ShowResetMsg) {
+$VariantChanged = new Func("VariantChanged", function($needWarning = null) use (&$ï¿½24ï¿½, &$Number, &$ShowResetMsg) {
   $dropdown = null; $selected = null; $descriptions = null;
-  $dropdown = get(call($«24», "#MachineVariant"), 0.0);
+  $dropdown = get(call($ï¿½24ï¿½, "#MachineVariant"), 0.0);
   $selected = call($Number, get(get(get($dropdown, "options"), get($dropdown, "selectedIndex")), "value"));
   $descriptions = new Object("0", "Standard Turing machine with tape infinite in both directions", "1", "Turing machine with tape infinite in one direction only (as used in, eg, <a href='http://math.mit.edu/~sipser/book.html'>Sipser</a>)", "2", "Non-deterministic Turing machine which allows multiple rules for the same state and symbol pair, and chooses one at random");
-  call_method(call($«24», "#MachineVariantDescription"), "html", get($descriptions, $selected));
+  call_method(call($ï¿½24ï¿½, "#MachineVariantDescription"), "html", get($descriptions, $selected));
   if (is($needWarning)) {
     call($ShowResetMsg, true);
   }
 });
-$SetupVariantCSS = new Func("SetupVariantCSS", function() use (&$nVariant, &$«24») {
+$SetupVariantCSS = new Func("SetupVariantCSS", function() use (&$nVariant, &$ï¿½24ï¿½) {
   if (eq($nVariant, 1.0)) {
-    call_method(call($«24», "#LeftTape"), "addClass", "OneDirectionalTape");
+    call_method(call($ï¿½24ï¿½, "#LeftTape"), "addClass", "OneDirectionalTape");
   } else {
-    call_method(call($«24», "#LeftTape"), "removeClass", "OneDirectionalTape");
+    call_method(call($ï¿½24ï¿½, "#LeftTape"), "removeClass", "OneDirectionalTape");
   }
 
 });
-$ShowResetMsg = new Func("ShowResetMsg", function($b = null) use (&$«24») {
+$ShowResetMsg = new Func("ShowResetMsg", function($b = null) use (&$ï¿½24ï¿½) {
   if (is($b)) {
-    call_method(call($«24», "#ResetMessage"), "fadeIn");
-    call_method(call($«24», "#ResetButton"), "addClass", "glow");
+    call_method(call($ï¿½24ï¿½, "#ResetMessage"), "fadeIn");
+    call_method(call($ï¿½24ï¿½, "#ResetButton"), "addClass", "glow");
   } else {
-    call_method(call($«24», "#ResetMessage"), "hide");
-    call_method(call($«24», "#ResetButton"), "removeClass", "glow");
+    call_method(call($ï¿½24ï¿½, "#ResetMessage"), "hide");
+    call_method(call($ï¿½24ï¿½, "#ResetButton"), "removeClass", "glow");
   }
 
 });
-$LoadFromCloud = new Func("LoadFromCloud", function($sID = null) use (&$«24», &$loadSuccessCallback, &$loadErrorCallback) {
+$LoadFromCloud = new Func("LoadFromCloud", function($sID = null) use (&$ï¿½24ï¿½, &$loadSuccessCallback, &$loadErrorCallback) {
   $n = null;
   $n = call_method($sID, "indexOf", "&");
   $sID = call_method($sID, "substring", 0.0, !eq($n, -1.0) ? $n : get($sID, "length"));
-  call_method($«24», "ajax", new Object("url", _concat("https://api.github.com/gists/", $sID), "type", "GET", "dataType", "json", "success", $loadSuccessCallback, "error", $loadErrorCallback));
+  call_method($ï¿½24ï¿½, "ajax", new Object("url", _concat("https://api.github.com/gists/", $sID), "type", "GET", "dataType", "json", "success", $loadSuccessCallback, "error", $loadErrorCallback));
 });
 $loadSuccessCallback = new Func("loadSuccessCallback", function($oData = null) use (&$debug, &$SetStatusMessage, &$JSON, &$LoadMachineSnapshot) {
   $oUnpackedObject = null;
@@ -574,11 +576,11 @@ $loadErrorCallback = new Func("loadErrorCallback", function($oData = null, $sSta
   call($debug, 1.0, _concat("Error: Load failed. AJAX request to Github failed. HTTP response ", $oRequestObj));
   call($SetStatusMessage, "Error loading saved machine :(", 2.0);
 });
-$SaveToCloud = new Func("SaveToCloud", function() use (&$SetSaveMessage, &$SaveMachineSnapshot, &$«24», &$saveSuccessCallback, &$saveErrorCallback, &$JSON) {
+$SaveToCloud = new Func("SaveToCloud", function() use (&$SetSaveMessage, &$SaveMachineSnapshot, &$ï¿½24ï¿½, &$saveSuccessCallback, &$saveErrorCallback, &$JSON) {
   $oState = null; $ajaxresult = null;
   call($SetSaveMessage, "Saving...", Object::$null);
   $oState = call($SaveMachineSnapshot);
-  $ajaxresult = call_method($«24», "ajax", new Object("url", "save.php", "type", "POST", "data", call_method($JSON, "stringify", $oState), "dataType", "json", "contentType", "application/json; charset=utf-8", "success", $saveSuccessCallback, "error", $saveErrorCallback));
+  $ajaxresult = call_method($ï¿½24ï¿½, "ajax", new Object("url", "save.php", "type", "POST", "data", call_method($JSON, "stringify", $oState), "dataType", "json", "contentType", "application/json; charset=utf-8", "success", $saveSuccessCallback, "error", $saveErrorCallback));
 });
 $saveSuccessCallback = new Func("saveSuccessCallback", function($oData = null) use (&$window, &$debug, &$Date, &$SetSaveMessage) {
   $sURL = null; $oNow = null; $sTimestamp = null;
@@ -599,35 +601,35 @@ $saveErrorCallback = new Func("saveErrorCallback", function($oData = null, $sSta
   call($debug, 1.0, _concat("Error: Save failed. AJAX request to Github failed. HTTP response ", $oRequestObj));
   call($SetSaveMessage, "Save failed, sorry :(", 2.0);
 });
-$SetSaveMessage = new Func("SetSaveMessage", function($sStr = null, $nBgFlash = null) use (&$«24») {
-  call_method(call($«24», "#SaveStatusMsg"), "html", $sStr);
-  call_method(call($«24», "#SaveStatus"), "slideDown");
+$SetSaveMessage = new Func("SetSaveMessage", function($sStr = null, $nBgFlash = null) use (&$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, "#SaveStatusMsg"), "html", $sStr);
+  call_method(call($ï¿½24ï¿½, "#SaveStatus"), "slideDown");
   if (is($nBgFlash)) {
-    call_method(call_method(call_method(call_method(call($«24», "#SaveStatusBg"), "stop", true, true), "css", "background-color", eq($nBgFlash, 1.0) ? "#88ee99" : "#eb8888"), "show"), "fadeOut", 800.0);
+    call_method(call_method(call_method(call_method(call($ï¿½24ï¿½, "#SaveStatusBg"), "stop", true, true), "css", "background-color", eq($nBgFlash, 1.0) ? "#88ee99" : "#eb8888"), "show"), "fadeOut", 800.0);
   }
 });
-$ClearSaveMessage = new Func("ClearSaveMessage", function() use (&$«24») {
-  call_method(call($«24», "#SaveStatusMsg"), "empty");
-  call_method(call($«24», "#SaveStatus"), "hide");
+$ClearSaveMessage = new Func("ClearSaveMessage", function() use (&$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, "#SaveStatusMsg"), "empty");
+  call_method(call($ï¿½24ï¿½, "#SaveStatus"), "hide");
 });
-$LoadSampleProgram = new Func("LoadSampleProgram", function($zName = null, $zFriendlyName = null, $bInitial = null) use (&$debug, &$SetStatusMessage, &$StopTimer, &$«24», &$ClearSaveMessage, &$RegExp, &$nVariant, &$VariantChanged, &$oTextarea, &$TextareaChanged, &$Compile, &$Reset) {
+$LoadSampleProgram = new Func("LoadSampleProgram", function($zName = null, $zFriendlyName = null, $bInitial = null) use (&$debug, &$SetStatusMessage, &$StopTimer, &$ï¿½24ï¿½, &$ClearSaveMessage, &$RegExp, &$nVariant, &$VariantChanged, &$oTextarea, &$TextareaChanged, &$Compile, &$Reset) {
   $zFileName = null;
   call($debug, 1.0, _concat("Load '", $zName, "'"));
   call($SetStatusMessage, "Loading sample program...");
   $zFileName = _concat("machines/", $zName, ".txt");
   call($StopTimer);
-  call_method($«24», "ajax", new Object("url", $zFileName, "type", "GET", "dataType", "text", "success", new Func(function($sData = null, $sStatus = null, $oRequestObj = null) use (&$RegExp, &$debug, &$«24», &$nVariant, &$VariantChanged, &$oTextarea, &$TextareaChanged, &$Compile, &$Reset, &$bInitial, &$SetStatusMessage, &$zFriendlyName) {
+  call_method($ï¿½24ï¿½, "ajax", new Object("url", $zFileName, "type", "GET", "dataType", "text", "success", new Func(function($sData = null, $sStatus = null, $oRequestObj = null) use (&$RegExp, &$debug, &$ï¿½24ï¿½, &$nVariant, &$VariantChanged, &$oTextarea, &$TextareaChanged, &$Compile, &$Reset, &$bInitial, &$SetStatusMessage, &$zFriendlyName) {
     $oRegExp = null; $aRegexpResult = null;
     $oRegExp = _new($RegExp, ";.*\\\$INITIAL_TAPE:? *(.+)\$");
     $aRegexpResult = call_method($oRegExp, "exec", $sData);
     if (!eq($aRegexpResult, Object::$null) && get($aRegexpResult, "length") >= 2.0) {
       call($debug, 4.0, _concat("Parsed initial tape: '", $aRegexpResult, "' length: ", eq($aRegexpResult, Object::$null) ? "null" : get($aRegexpResult, "length")));
-      set(get(call($«24», "#InitialInput"), 0.0), "value", get($aRegexpResult, 1.0));
+      set(get(call($ï¿½24ï¿½, "#InitialInput"), 0.0), "value", get($aRegexpResult, 1.0));
       $sData = call_method($sData, "replace", new RegExp("^.*\\\$INITIAL_TAPE:.*\$", "m"), "");
     }
-    set(get(call($«24», "#InitialState"), 0.0), "value", "0");
+    set(get(call($ï¿½24ï¿½, "#InitialState"), 0.0), "value", "0");
     $nVariant = 0.0;
-    call_method(call($«24», "#MachineVariant"), "val", 0.0);
+    call_method(call($ï¿½24ï¿½, "#MachineVariant"), "val", 0.0);
     call($VariantChanged, false);
     set($oTextarea, "value", $sData);
     call($TextareaChanged);
@@ -640,7 +642,7 @@ $LoadSampleProgram = new Func("LoadSampleProgram", function($zName = null, $zFri
     call($debug, 1.0, _concat("Error: Load failed. HTTP response ", get($oRequestObj, "status"), " ", get($oRequestObj, "statusText")));
     call($SetStatusMessage, _concat("Error loading ", $zFriendlyName, " :("), 2.0);
   })));
-  call_method(call($«24», "#LoadMenu"), "slideUp");
+  call_method(call($ï¿½24ï¿½, "#LoadMenu"), "slideUp");
   call($ClearSaveMessage);
 });
 $TextareaChanged = new Func("TextareaChanged", function() use (&$oTextarea, &$nTextareaLines, &$UpdateTextareaDecorations, &$bIsDirty, &$oPrevInstruction, &$RenderLineMarkers) {
@@ -654,70 +656,70 @@ $TextareaChanged = new Func("TextareaChanged", function() use (&$oTextarea, &$nT
   $oPrevInstruction = Object::$null;
   call($RenderLineMarkers);
 });
-$UpdateTextareaDecorations = new Func("UpdateTextareaDecorations", function() use (&$«24», &$oTextarea, &$UpdateTextareaScroll) {
+$UpdateTextareaDecorations = new Func("UpdateTextareaDecorations", function() use (&$ï¿½24ï¿½, &$oTextarea, &$UpdateTextareaScroll) {
   $oBackgroundDiv = null; $sSource = null; $aLines = null; $i = null;
-  $oBackgroundDiv = call($«24», "#SourceBackground");
+  $oBackgroundDiv = call($ï¿½24ï¿½, "#SourceBackground");
   call_method($oBackgroundDiv, "empty");
   $sSource = get($oTextarea, "value");
   $sSource = call_method($sSource, "replace", new RegExp("\\r", "g"), "");
   $aLines = call_method($sSource, "split", "\n");
   for ($i = 0.0; $i < get($aLines, "length"); $i++) {
-    call_method($oBackgroundDiv, "append", call($«24», _concat("<div id='talinebg", $i, 1.0, "' class='talinebg'><div class='talinenum'>", $i, 1.0, "</div></div>")));
+    call_method($oBackgroundDiv, "append", call($ï¿½24ï¿½, _concat("<div id='talinebg", $i, 1.0, "' class='talinebg'><div class='talinenum'>", $i, 1.0, "</div></div>")));
   }
   call($UpdateTextareaScroll);
 });
-$SetActiveLines = new Func("SetActiveLines", function($next = null, $prev = null) use (&$«24») {
+$SetActiveLines = new Func("SetActiveLines", function($next = null, $prev = null) use (&$ï¿½24ï¿½) {
   $shift = null; $i = null; $oMarker = null;
-  call_method(call($«24», ".talinebgnext"), "removeClass", "talinebgnext");
-  call_method(call($«24», ".NextLineMarker"), "remove");
-  call_method(call($«24», ".talinebgprev"), "removeClass", "talinebgprev");
-  call_method(call($«24», ".PrevLineMarker"), "remove");
+  call_method(call($ï¿½24ï¿½, ".talinebgnext"), "removeClass", "talinebgnext");
+  call_method(call($ï¿½24ï¿½, ".NextLineMarker"), "remove");
+  call_method(call($ï¿½24ï¿½, ".talinebgprev"), "removeClass", "talinebgprev");
+  call_method(call($ï¿½24ï¿½, ".PrevLineMarker"), "remove");
   $shift = false;
   for ($i = 0.0; $i < get($next, "length"); $i++) {
-    $oMarker = call($«24», "<div class='NextLineMarker'>Next<div class='NextLineMarkerEnd'></div></div>");
-    call_method(call_method(call($«24», _concat("#talinebg", get($next, $i), 1.0)), "addClass", "talinebgnext"), "prepend", $oMarker);
+    $oMarker = call($ï¿½24ï¿½, "<div class='NextLineMarker'>Next<div class='NextLineMarkerEnd'></div></div>");
+    call_method(call_method(call($ï¿½24ï¿½, _concat("#talinebg", get($next, $i), 1.0)), "addClass", "talinebgnext"), "prepend", $oMarker);
     if (eq(get($next, $i), $prev)) {
       call_method($oMarker, "addClass", "shifted");
       $shift = true;
     }
   }
   if ($prev >= 0.0) {
-    $oMarker = call($«24», "<div class='PrevLineMarker'>Prev<div class='PrevLineMarkerEnd'></div></div>");
+    $oMarker = call($ï¿½24ï¿½, "<div class='PrevLineMarker'>Prev<div class='PrevLineMarkerEnd'></div></div>");
     if (is($shift)) {
-      call_method(call($«24», _concat("#talinebg", $prev, 1.0)), "prepend", $oMarker);
+      call_method(call($ï¿½24ï¿½, _concat("#talinebg", $prev, 1.0)), "prepend", $oMarker);
       call_method($oMarker, "addClass", "shifted");
     } else {
-      call_method(call_method(call($«24», _concat("#talinebg", $prev, 1.0)), "addClass", "talinebgprev"), "prepend", $oMarker);
+      call_method(call_method(call($ï¿½24ï¿½, _concat("#talinebg", $prev, 1.0)), "addClass", "talinebgprev"), "prepend", $oMarker);
     }
 
   }
 });
-$SetErrorLine = new Func("SetErrorLine", function($num = null) use (&$«24») {
-  call_method(call($«24», _concat("#talinebg", $num, 1.0)), "addClass", "talinebgerror");
+$SetErrorLine = new Func("SetErrorLine", function($num = null) use (&$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, _concat("#talinebg", $num, 1.0)), "addClass", "talinebgerror");
 });
-$ClearErrorLines = new Func("ClearErrorLines", function() use (&$«24») {
-  call_method(call($«24», ".talinebg"), "removeClass", "talinebgerror");
+$ClearErrorLines = new Func("ClearErrorLines", function() use (&$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, ".talinebg"), "removeClass", "talinebgerror");
 });
-$UpdateTextareaScroll = new Func("UpdateTextareaScroll", function() use (&$«24», &$oTextarea) {
+$UpdateTextareaScroll = new Func("UpdateTextareaScroll", function() use (&$ï¿½24ï¿½, &$oTextarea) {
   $oBackgroundDiv = null;
-  $oBackgroundDiv = call($«24», "#SourceBackground");
-  call_method(call($«24», $oBackgroundDiv), "css", new Object("margin-top", _concat((-1.0 * call_method(call($«24», $oTextarea), "scrollTop")), "px")));
+  $oBackgroundDiv = call($ï¿½24ï¿½, "#SourceBackground");
+  call_method(call($ï¿½24ï¿½, $oBackgroundDiv), "css", new Object("margin-top", _concat((-1.0 * call_method(call($ï¿½24ï¿½, $oTextarea), "scrollTop")), "px")));
 });
-$AboutMenuClicked = new Func("AboutMenuClicked", function($name = null) use (&$«24») {
-  call_method(call($«24», ".AboutItem"), "css", "font-weight", "normal");
-  call_method(call($«24», _concat("#AboutItem", $name)), "css", "font-weight", "bold");
-  call_method(call_method(call($«24», ".AboutContent"), "slideUp", new Object("queue", false, "duration", 150.0)), "fadeOut", 150.0);
-  call_method(call_method(call_method(call_method(call_method(call_method(call($«24», _concat("#AboutContent", $name)), "stop"), "detach"), "prependTo", "#AboutContentContainer"), "fadeIn", new Object("queue", false, "duration", 150.0)), "css", "display", "none"), "slideDown", 150.0);
+$AboutMenuClicked = new Func("AboutMenuClicked", function($name = null) use (&$ï¿½24ï¿½) {
+  call_method(call($ï¿½24ï¿½, ".AboutItem"), "css", "font-weight", "normal");
+  call_method(call($ï¿½24ï¿½, _concat("#AboutItem", $name)), "css", "font-weight", "bold");
+  call_method(call_method(call($ï¿½24ï¿½, ".AboutContent"), "slideUp", new Object("queue", false, "duration", 150.0)), "fadeOut", 150.0);
+  call_method(call_method(call_method(call_method(call_method(call_method(call($ï¿½24ï¿½, _concat("#AboutContent", $name)), "stop"), "detach"), "prependTo", "#AboutContentContainer"), "fadeIn", new Object("queue", false, "duration", 150.0)), "css", "display", "none"), "slideDown", 150.0);
 });
-$OnLoad = new Func("OnLoad", function() use (&$nDebugLevel, &$«24», &$isOldIE, &$debug, &$TextareaChanged, &$oTextarea, &$VariantChanged, &$window, &$SetStatusMessage, &$LoadFromCloud, &$LoadSampleProgram) {
+$OnLoad = new Func("OnLoad", function() use (&$nDebugLevel, &$ï¿½24ï¿½, &$isOldIE, &$debug, &$TextareaChanged, &$oTextarea, &$VariantChanged, &$window, &$SetStatusMessage, &$LoadFromCloud, &$LoadSampleProgram) {
   if ($nDebugLevel > 0.0) {
-    call_method(call($«24», ".DebugClass"), "toggle", true);
+    call_method(call($ï¿½24ï¿½, ".DebugClass"), "toggle", true);
   }
   if (!eq(_typeof($isOldIE), "undefined")) {
     call($debug, 1.0, "Old version of IE detected, adding extra textarea events");
-    call_method(call($«24», "#Source"), "on", "keypress change", $TextareaChanged);
+    call_method(call($ï¿½24ï¿½, "#Source"), "on", "keypress change", $TextareaChanged);
   }
-  $oTextarea = get(call($«24», "#Source"), 0.0);
+  $oTextarea = get(call($ï¿½24ï¿½, "#Source"), 0.0);
   call($TextareaChanged);
   call($VariantChanged, false);
   if (!eq(get(get($window, "location"), "search"), "")) {
@@ -730,11 +732,11 @@ $OnLoad = new Func("OnLoad", function() use (&$nDebugLevel, &$«24», &$isOldIE, &
   }
 
 });
-$testsave = new Func("testsave", function($success = null) use (&$saveSuccessCallback, &$«24», &$saveErrorCallback) {
+$testsave = new Func("testsave", function($success = null) use (&$saveSuccessCallback, &$ï¿½24ï¿½, &$saveErrorCallback) {
   if (is($success)) {
-    call($saveSuccessCallback, new Object("id", _concat("!!!WHACK!!!", call_method($«24», "now")), "url", "http://wha.ck/xxx"));
+    call($saveSuccessCallback, new Object("id", _concat("!!!WHACK!!!", call_method($ï¿½24ï¿½, "now")), "url", "http://wha.ck/xxx"));
   } else {
-    call($saveErrorCallback, new Object("id", _concat("!!!WHACK!!!", call_method($«24», "now")), "url", "http://wha.ck/xxx"), Object::$null, new Object("status", -1.0, "statusText", "dummy"));
+    call($saveErrorCallback, new Object("id", _concat("!!!WHACK!!!", call_method($ï¿½24ï¿½, "now")), "url", "http://wha.ck/xxx"), Object::$null, new Object("status", -1.0, "statusText", "dummy"));
   }
 
 });
@@ -746,13 +748,13 @@ $repeat = new Func("repeat", function($c = null, $n = null) {
   }
   return $sTmp;
 });
-$debug = new Func("debug", function($n = null, $str = null) use (&$SetStatusMessage, &$console, &$nDebugLevel, &$«24», &$document) {
+$debug = new Func("debug", function($n = null, $str = null) use (&$SetStatusMessage, &$console, &$nDebugLevel, &$ï¿½24ï¿½, &$document) {
   if ($n <= 0.0) {
     call($SetStatusMessage, $str);
     call_method($console, "log", $str);
   }
   if ($nDebugLevel >= $n) {
-    call_method(call($«24», "#debug"), "append", call_method($document, "createTextNode", _concat($str, "\n")));
+    call_method(call($ï¿½24ï¿½, "#debug"), "append", call_method($document, "createTextNode", _concat($str, "\n")));
     call_method($console, "log", $str);
   }
 });
@@ -771,7 +773,7 @@ $nMaxUndo = 10.0;
 $aUndoList = new Arr();
 $nTextareaLines = -1.0;
 $bIsDirty = true;
-$oNextLineMarker = call($«24», "<div class='NextLineMarker'>Next<div class='NextLineMarkerEnd'></div></div>");
-$oPrevLineMarker = call($«24», "<div class='PrevLineMarker'>Prev<div class='PrevLineMarkerEnd'></div></div>");
+$oNextLineMarker = call($ï¿½24ï¿½, "<div class='NextLineMarker'>Next<div class='NextLineMarkerEnd'></div></div>");
+$oPrevLineMarker = call($ï¿½24ï¿½, "<div class='PrevLineMarker'>Prev<div class='PrevLineMarkerEnd'></div></div>");
 $oPrevInstruction = Object::$null;
 $sPreviousStatusMsg = "";
