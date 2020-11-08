@@ -7,30 +7,27 @@
 <!-- CONTENT -->
 
 
-<a  type="button" class="btn btn-primary" 
-href="<?php echo base_url();?>/saida">
-Enviar</a>
 
-<section>
-
-	<h1>About this page</h1>
-
-	<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-	<p>If you would like to edit this page you will find it located at:</p>
-
-	<pre><code>app/Views/welcome_message.php</code></pre>
-
-	<p>The corresponding controller for this page can be found at:</p>
-
-	<pre><code>app/Controllers/Home.php</code></pre>
-
-</section>
-
-
+<form>
+  <div class="form-group">
+    <label for="Script">Script</label>
+    <input class="form-control" id="Script" placeholder="Script">
+  </div>
+  <div class="form-group">
+    <label for="Entrada">Entrada</label>
+    <input class="form-control" id="Entrada" placeholder="Entrada">
+  </div>
+	<a  type="button" class="btn btn-primary" 
+	href="<?php echo base_url();?>/saida">
+	Enviar</a>
+</form>
 
 <!-- SCRIPTS -->
 <script>
+
+
+
+
 
 
 </script>
