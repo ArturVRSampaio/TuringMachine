@@ -14,15 +14,15 @@
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-8">
-			<form role="form" id="Controle">
+			<form name="Controle" role="form" id="Controle">
 				<div class="form-group">
 					 
                   <label for="Script">Script</label>
-                  <input class="form-control" id="Script" placeholder="Script">
+                  <input name="Script" class="form-control" id="Script" placeholder="Script">
                 </div>
                 <div class="form-group">
                   <label for="Entrada">Entrada</label>
-                  <input class="form-control mb-4" id="Entrada" placeholder="Entrada">
+                  <input name="Entrada" class="form-control mb-4" id="Entrada" placeholder="Entrada">
                 
 			</form>
             <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary">Enviar</button>
