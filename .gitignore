@@ -1,2 +1,2 @@
-writable/logs/*
-writable/debugbar/*
+writable/logs/**
+writable/debugbar/**
