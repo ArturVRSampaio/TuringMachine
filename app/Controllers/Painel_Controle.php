@@ -12,7 +12,10 @@ class Painel_Controle extends BaseController
 	}
 
     function Controle() {
-        
+        helper('Machine_helper');
+        //$result = tm(I, tape, end, state, i, cell, current);
+        $result = tm(I, [1,1,1], end, state, i, cell, current);
+        var_dump($result);
     }
 
 	//--------------------------------------------------------------------

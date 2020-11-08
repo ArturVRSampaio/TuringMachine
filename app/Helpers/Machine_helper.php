@@ -16,18 +16,29 @@
 //
 //
 //
+function master()
+{
+  bool $fim = FALSE;
+  array $fita = [];
+  array $estados = [];
 
-$tm = new Func("tm", function($I = null, $tape = null, $end = null, $state = null, $i = null, $cell = null, $current = null) {
-  $i = 0.0;
-  while (!eq($state, $end)) {
-    $cell = get($tape, $i);
-    $current = is($cell) ? get(get($I, $state), $cell) : get(get($I, $state), "B");
-    if (not($current)) {
-      return false;
-    }
-    call_method($tape, "splice", $i, 1.0, get($current, "w"));
-    $i += get($current, "m");
-    $state = get($current, "n");
+  while($fim){
+      $estados[x]
   }
-  return $tape;
-});
+}
+function move_right()
+{
+
+}
+function move_left()
+{
+  
+}
+function write()
+{
+  
+}
+function read()
+{
+  
+}
