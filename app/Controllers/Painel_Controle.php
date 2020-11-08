@@ -11,6 +11,11 @@ class Painel_Controle extends BaseController
         return view('Painel_Controle_View.php');
 	}
 
+    function Controle() {
+        $x= "you got that";
+        var_dump($x);
+    }
+
 	//--------------------------------------------------------------------
 
 }
