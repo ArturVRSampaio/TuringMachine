@@ -5,38 +5,46 @@
 //shift left
 //shift left
 //
-//right
+//write
 //read
 //
 //process
 //
-//
-//
-//
-//
-//
-//
+
+
 function master()
 {
   //flag de aceita
   $fim = True;
+
+  //alfabeto da fita (conjunto finito de símbolos)
   //fita de memoria, originalmente contendo a entrada do usuario
   $fita = [];
 
+  //alfabeto finito de símbolos
+  $alfabeto = [];
+  
+  //FQ de estados finais
+  $estadosFinais = [];
+  
+  //símbolo branco
 
+  //conjunto finito de estados
   //lista de estados do usuario
   $estados = [];
 
-  //ler
-  //
-  //se 0 escreva //se 0 mova //se 0 muda p estado // //se 1 escreva //se 1 mova // muda p estado
-  //
-  //exemplo 
-  //{2, -2, 3, 0, 2, 3}
-  //ou seja
-  //se 0 escreva nada, mova 2 p a esquerda mude para o estado 3
-  //se 1 escreva 0, mova 2 p a direita mude para o estado 3
 
+  //para garantir que o conjunto de estados seja ligado a qualquer alfabeto de qualquer tamanho 
+  //
+  //funcionamento:
+  //
+  //alfabeto: {a,b,c,d}
+  //
+  //estados:{0,1,2,3,4}
+  //
+  //estado[0]:{a,b,c,d}
+  //
+  //estado[0,a]:{ escreve X, move Y, muda para o estado[Z]}
 
   while($fim){
       $estados[x];
