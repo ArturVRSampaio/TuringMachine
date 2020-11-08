@@ -13,7 +13,8 @@ class Painel_Controle extends BaseController
 
     function Controle() {
         $x= "you got that";
-        var_dump($x);
+        //var_dump($x);
+        echo json_encode(array("status" => TRUE));
     }
 
 	//--------------------------------------------------------------------
