@@ -2,23 +2,40 @@
 
 
 <?= $this->include('Base_View') ?>
+<?= $this->include('NavBar') ?>
 <body>
 
 <!-- CONTENT -->
 
 
 
-<form id="Controle">
-  <div class="form-group">
-    <label for="Script">Script</label>
-    <input class="form-control" id="Script" placeholder="Script">
-  </div>
-  <div class="form-group">
-    <label for="Entrada">Entrada</label>
-    <input class="form-control" id="Entrada" placeholder="Entrada">
-  </div>
-</form>
-<button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary">Enviar</button>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-8">
+			<form role="form" id="Controle">
+				<div class="form-group">
+					 
+                  <label for="Script">Script</label>
+                  <input class="form-control" id="Script" placeholder="Script">
+                </div>
+                <div class="form-group">
+                  <label for="Entrada">Entrada</label>
+                  <input class="form-control" id="Entrada" placeholder="Entrada">
+                
+			</form>
+            <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary">Enviar</button>
+		</div>
+		<div class="col-md-2">
+		</div>
+	</div>
+</div>
+
+
+
+<?= $this->include('Footer') ?>
+
 
 <!-- SCRIPTS -->
 <script type= 'text/javascript'>
