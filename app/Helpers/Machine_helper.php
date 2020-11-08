@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php 
 
 // competencias de uma MQT:
 //
@@ -12,8 +12,8 @@
 //
 
 
-function master()
-{
+  function master()
+  {
   //flag de aceita
   $fim = True;
 
@@ -46,10 +46,42 @@ function master()
   //
   //estado[0,a]:{ escreve X, move Y, muda para o estado[Z]}
 
-  while($fim){
-      $estados[x];
+  //fixando valores de teste
+  //
+  $fita=["a","b","c","d"];
+  // 
+  $alfabeto=["a","b"];
+  
+  
+  //
+  $estados  = ["0","1"];
+  $estados["0"] = ["a","b","c","d"];
+  $estados["1"] = ["a","b","c","d"];
+  
+  $estados["0"]["a"] = ["a","2","1"];
+  $estados["0"]["b"] = ["a","2","1"];
+  $estados["0"]["c"] = ["a","2","1"];
+  $estados["0"]["d"] = ["a","2","1"];
+  
 
-    };
+  $estados["1"]["a"] = ["a","2","1"];
+  $estados["1"]["b"] = ["a","2","1"];
+  $estados["1"]["c"] = ["a","2","1"];
+  $estados["1"]["d"] = ["a","2","1"];
+  
+  
+  $estadoAtual = 0;
+  $fitaPos = 0;
+  //while($fim!= true){
+
+    //posicao atual na fita
+    $leitura = $fita[$fitaPos];
+    
+    //identificando prioxima tarefa
+    $acoes = $estados[$estadoAtual][$leitura];
+  
+    var_dump($acoes);
+  //};
 }
 
 
