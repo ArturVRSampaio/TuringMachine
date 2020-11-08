@@ -2,13 +2,13 @@
 
 // competencias de uma MQT:
 //
+//shift left
+//shift left
 //
+//right
+//read
 //
-//
-//
-//
-//
-//
+//process
 //
 //
 //
