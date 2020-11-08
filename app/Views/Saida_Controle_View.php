@@ -6,6 +6,11 @@
 
 <!-- CONTENT -->
 
+
+<a  type="button" class="btn btn-primary" 
+href="<?php echo base_url();?>/home">
+Voltar a Home</a>
+
 <section>
 
 	<h1>About this page</h1>

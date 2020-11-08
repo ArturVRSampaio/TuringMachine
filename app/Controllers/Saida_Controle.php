@@ -8,7 +8,7 @@ class Saida_Controle extends BaseController
 
     public function index()
 	{
-        return view('Painel_Controle_View.php');
+        return view('Saida_Controle_View.php');
 	}
 
 	//--------------------------------------------------------------------

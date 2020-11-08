@@ -6,6 +6,10 @@
 
 <!-- CONTENT -->
 
+<a  type="button" class="btn btn-primary" 
+href="<?php echo base_url();?>/controle">
+ir para o painel de controle</a>
+
 <section>
 
 	<h1>About this page</h1>
