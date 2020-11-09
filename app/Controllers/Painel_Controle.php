@@ -15,8 +15,14 @@ class Painel_Controle extends BaseController
     function Controle() {
         $request = service('request');
         //teste Json
-        $x= $request->getPost();	
-        var_dump($x);	
+        $Leitura_Estados= $request->getPost("Estados");
+        $Leitura_FitaEntrada= $request->getPost("FitaEntrada");
+        $Leitura_TamanhoFita= $request->getPost("TamanhoFita");
+
+        var_dump($Leitura_Estados);
+        var_dump($Leitura_FitaEntrada);
+        var_dump($Leitura_TamanhoFita);	
+
         echo json_encode(array("status" => TRUE));
         return;        
 
@@ -27,7 +33,7 @@ class Painel_Controle extends BaseController
         helper('Machine_helper');
         
         //fita entrada
-        $fitaEntrada = array("a","b","c","a","b");
+        // $fitaEntrada = array("a","b","c","a","b");
 
 
         // array estados exemplo
@@ -50,9 +56,10 @@ class Painel_Controle extends BaseController
         //lista de estados do usuario
         $estados = array($listachave, $listachave);
 
-        $fitaSize = 12;
+        // $fitaSize = 12;
 
-        master($estados, $fitaEntrada, $fitaSize);
+        master($Leitura_Estados, $Leitura_FitaEntrada, $Leitura_TamanhoFita);
+        // master($estados, $fitaEntrada, $fitaSize);
     }
 
 	//--------------------------------------------------------------------
