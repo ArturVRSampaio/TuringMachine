@@ -12,7 +12,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-							 <a class="nav-link" href="<?php echo base_url();?>/saida">Saida de dados <span class="sr-only">(current)</span></a>
+							 <a class="nav-link" href="<?php echo base_url();?>/controle">Ir para o painel de controle<span class="sr-only">(current)</span></a>
 						</li>
 					</ul>
 				</div>
