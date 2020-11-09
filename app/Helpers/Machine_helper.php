@@ -1,50 +1,20 @@
 <?php
-function master(){
-  //alfabeto da fita (conjunto finito de símbolos)
-  //fita de memoria, originalmente contendo a entrada do usuario
-  //$fita=["a","b",""];
-  $fita=array_fill(0, 100000, '');
-  
+function master($estados, $fitaEntrada, $fitaSize){
+
+  $fita=array_fill(0, $fitaSize, '');
+    
   //posicao inicial do cabecote
   $fitaPos = sizeof($fita)/2;
   
-  //fita entrada
-  $fitaEntrada = array("a","b","c","a","b");
-
+  
   //escrevendo entrada na fita da maquina
   foreach($fitaEntrada as $key => $value){
     $fita[$fitaPos + $key] = $value; 
   }
 
-
-  //alfabeto finito de símbolos
-  $alfabeto=["a","b",""];
   
   //símbolo branco
   //""
-  
-  //q0
-  // 000 -> Q0a b 2 1
-  // 010 -> Q0b a 2 1
-  // 020 -> Q0_ "" 2 0
-  
-  //q1
-  // 100 -> Q1a b 2 1
-  // 110 -> Q1b a 2 1
-  // 120 -> Q1_ "" 2 0 ->estado final
-
-
-  //array exemplo 
-  $listaAcaoa = array("a", "b", 1, 1);
-  $listaAcaob = array("b", "a", 1, 1);
-  $listaAcaoVazio = array("", "a", 2, -1);
-  
-  
-  $listachave = array($listaAcaoa, $listaAcaob, $listaAcaoVazio);
-
-  //conjunto finito de estados
-  //lista de estados do usuario
-  $estados = array($listachave, $listachave);
 
   //valores iniciais
   $aceita = False;

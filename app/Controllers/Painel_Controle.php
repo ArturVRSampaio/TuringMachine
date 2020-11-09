@@ -14,13 +14,44 @@ class Painel_Controle extends BaseController
     function Controle() {
         
         //teste Json
-        $x= $this->input->post();	
-        var_dump($x);	
-        echo json_encode(array("status" => TRUE));
+        //$x= $this->input->post();	
+        //var_dump($x);	
+        //echo json_encode(array("status" => TRUE));
         
+
+        ///////////////////////
         //teste maquina
-        //helper('Machine_helper');
-        //master();
+        ///////////////////////
+
+        helper('Machine_helper');
+        
+        //fita entrada
+        $fitaEntrada = array("a","b","c","a","b");
+
+
+        // array estados exemplo
+        //q0
+        // 000 -> Q0a b 2 1
+        // 010 -> Q0b a 2 1
+        // 020 -> Q0_ "" 2 -1 ->estado final
+        //q1
+        // 100 -> Q1a b 2 1
+        // 110 -> Q1b a 2 1
+        // 120 -> Q1_ "" 2 -1 ->estado final
+
+        $listaAcaoa = array("a", "b", 1, 1);
+        $listaAcaob = array("b", "a", 1, 1);
+        $listaAcaoVazio = array("", "a", 2, -1);
+
+        $listachave = array($listaAcaoa, $listaAcaob, $listaAcaoVazio);
+
+        //conjunto finito de estados
+        //lista de estados do usuario
+        $estados = array($listachave, $listachave);
+
+        $fitaSize = 12;
+
+        master($estados, $fitaEntrada, $fitaSize);
     }
 
 	//--------------------------------------------------------------------
