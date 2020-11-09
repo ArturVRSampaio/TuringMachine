@@ -15,14 +15,21 @@
 		</div>
 		<div class="col-md-8">
 			<form name="Controle" role="form" id="Controle">
-				<div class="form-group">
-					 
-                  <label for="Script">Script</label>
-                  <input name="Script" class="form-control" id="Script" placeholder="Script">
+
+				<div class="form-group">					 
+                  <label for="Estados">Estados</label>
+                  <input name="Estados" class="form-control" id="Estados" placeholder="Estados">
                 </div>
+
                 <div class="form-group">
-                  <label for="Entrada">Entrada</label>
-                  <input name="Entrada" class="form-control mb-4" id="Entrada" placeholder="Entrada">
+                  <label for="FitaEntrada">FitaEntrada</label>
+                  <input name="FitaEntrada" class="form-control mb-4" id="FitaEntrada" placeholder="FitaEntrada">
+                </div>
+
+                <div class="form-group">
+                  <label for="TamanhoFita">TamanhoFita</label>
+                  <input name="TamanhoFita" class="form-control mb-4" id="TamanhoFita" placeholder="TamanhoFita">
+                </div>
                 
 			</form>
             <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary">Enviar</button>
