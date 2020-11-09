@@ -2,7 +2,7 @@
 
 Este é um projeto de tcc elaborado por Artur Vitorio Ribeiro Sampaio e Reinaldo Rozato junior para a conclusao do curso de ciencia da computacao no ano de 2020.
 
-o projeto é uma maquina de turing php com uma interface amigavel, permitindo que esta tenha amplo uso em salas de aulas como ferramenta educacional sobre a logica que original a maneira como computadores são até hoje
+o projeto é uma maquina de turing php com uma interface amigavel, permitindo que esta tenha amplo uso em salas de aulas como ferramenta educacional sobre a maquina em si, e seu funcionamento/operacao
 
 
 ## Server Requirements
