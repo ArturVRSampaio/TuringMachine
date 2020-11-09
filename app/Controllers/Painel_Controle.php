@@ -1,4 +1,5 @@
 <?php namespace App\Controllers;
+use CodeIgniter\HTTP\IncomingRequest;
 
 class Painel_Controle extends BaseController
 {
@@ -12,12 +13,12 @@ class Painel_Controle extends BaseController
 	}
 
     function Controle() {
-        
+        $request = service('request');
         //teste Json
-        //$x= $this->input->post();	
-        //var_dump($x);	
-        //echo json_encode(array("status" => TRUE));
-        
+        $x= $request->getPost();	
+        var_dump($x);	
+        echo json_encode(array("status" => TRUE));
+        return;        
 
         ///////////////////////
         //teste maquina
