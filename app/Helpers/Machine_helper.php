@@ -4,7 +4,7 @@ function master($estados, $fitaEntrada, $fitaSize){
   $fita=array_fill(0, $fitaSize, '');
     
   //posicao inicial do cabecote
-  $fitaPos = sizeof($fita)/2;
+  $fitaPos = (sizeof($fita)/2 ) - (sizeof($fitaEntrada)/2);
   
   
   //escrevendo entrada na fita da maquina
