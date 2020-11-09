@@ -13,7 +13,7 @@
 </div>
 
 <!--  -->
-<div class="row">
+<div class="row mb-4">
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-8">
@@ -64,23 +64,27 @@
 		</div>
 		<div class="col-md-8">
 			<h3>
-				h3. Lorem ipsum dolor sit amet.
+				Alan Turing
 			</h3>
-			<h2>
-				Heading
-			</h2>
+			<img src="https://i.imgur.com/HTGuASO.png" class="h-25 img-fluid rounded float-left img-thumbnail mr-4" alt="Responsive image">
 			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			Alan Mathison Turing, o criador da Máquina de Turing foi um matemático, cientista da computação, lógico , criptoanalista, filósofo, e biólogo teórico inglês. Foi influente no desenvolvimento da ciência da computação e na formalização do conceito de algoritmo e computação com a máquina de Turing, desempenhando um papel importante na criação do computador moderno. Foi também pioneiro na inteligência artificial e na ciência da computação. É conhecido como o pai da computação.
 			</p>
 			<p>
-				<a class="btn" href="#">View details »</a>
+			Aos 24 anos, consagrou-se com a projeção de uma máquina que, de acordo com um sistema formal, pudesse fazer operações computacionais. Mostrou como um simples sistema automático poderia manipular símbolos de um sistema de regras próprias. A máquina teórica de Turing pode indicar que sistemas poderosos poderiam ser construídos. Tornou possível o processamento de símbolos, ligando a abstração de sistemas cognitivos e a realidade concreta dos números. Isto é buscado até hoje por pesquisadores de sistemas com Inteligência Artificial (IA).
+			</p>
+			<p>
+				<a class="btn" target="_blank" href="https://pt.wikipedia.org/wiki/Alan_Turing">Mais sobre »</a>
 			</p>
 			<blockquote class="blockquote">
-				<p class="mb-0">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+				<p class="mb-2">
+				“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”
+				<br>
+				<br>
+				“Às vezes são as pessoas que ninguém imaginam que fazem as coisas que ninguém pode imaginar.”
 				</p>
 				<footer class="blockquote-footer">
-					Someone famous in <cite>Source Title</cite>
+					Alan Turing
 				</footer>
 			</blockquote>
 		</div>
@@ -99,9 +103,7 @@
 			<h3>
 				h3. Lorem ipsum dolor sit amet.
 			</h3>
-			<h2>
-				Heading
-			</h2>
+			
 			<p>
 				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
 			</p>
