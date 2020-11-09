@@ -3,9 +3,6 @@ function master(){
   
   //FQ de estados finais
   $estadosFinais = [];
-
-  //conjunto finito de estados
-  //lista de estados do usuario
   $estados = [];
 
   //alfabeto da fita (conjunto finito de símbolos)
@@ -29,16 +26,17 @@ function master(){
   // 120 -> Q1_ a 2 0
 
 
-
-//array exemplo 
+  //array exemplo 
   $listaAcaoa = array("a", "a", 2, 1);
   $listaAcaob = array("b", "a", 2, 1);
   $listaAcaoVazio = array("", "a", 2, 0);
   $listachave = array($listaAcaoa, $listaAcaob, $listaAcaoVazio);
+
+  //conjunto finito de estados
+  //lista de estados do usuario
   $estados = array($listachave, $listachave);
 
 
-  
   //valores iniciais
   $aceita = False;
   $estadoAtual = 0;
