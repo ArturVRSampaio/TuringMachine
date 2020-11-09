@@ -43,6 +43,7 @@ function master($estados, $fitaEntrada, $fitaSize){
 
         //mudando estado
         $estadoAtual = $estados[$estadoAtual][$key][3];
+        break;
       }
       //fim de nao aceitacao, o algorizmo esperado nao foi encontrado
       elseif(sizeof($estados[$estadoAtual])-1== $key){
