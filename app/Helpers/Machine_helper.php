@@ -27,6 +27,7 @@ function master($estados, $fitaEntrada, $fitaSize){
       //fim de aceitacao
       $fim=true;
       $aceita=true;
+      break;
     }
     
     //ler conteudo atual da lista
