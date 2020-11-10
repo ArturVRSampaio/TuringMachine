@@ -6,16 +6,25 @@
 
 <body>
 
+<ul class="nav nav-tabs md-12 d-flex justify-content-center">
+	<li class="nav-item">
+		<a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" data-toggle="tab" href="#menu1">Tutorial</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" data-toggle="tab" href="#menu2">Descrição técnica</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" data-toggle="tab" href="#menu3">Menu 3</a>
+	</li>
+</ul>
+
 <div class="container">
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-    <li><a data-toggle="tab" href="#menu1">Tutorial</a></li>
-    <li><a data-toggle="tab" href="#menu2">Descrição técnica</a></li>
-    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
-  </ul>
 
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
+    <div id="home" class="tab-pane active">
       	<div>
 			<h3 class= "mb-4">
 					Máquina de Turing
