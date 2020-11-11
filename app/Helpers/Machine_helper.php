@@ -35,15 +35,15 @@ function master($estados, $fitaEntrada, $fitaSize){
     
     //verificando existe algum valor do alfabeto do estado atual
     foreach($estados[$estadoAtual] as $key => $value){
-      if($value[0] ===$leitura){
+      if($value[1] ===$leitura){
         //escrevendo
-        $fita[$fitaPos] = $estados[$estadoAtual][$key][1];
+        $fita[$fitaPos] = $estados[$estadoAtual][$key][2];
 
         //movendo
-        $fitaPos += $estados[$estadoAtual][$key][2];
+        $fitaPos += $estados[$estadoAtual][$key][3];
 
         //mudando estado
-        $estadoAtual = $estados[$estadoAtual][$key][3];
+        $estadoAtual = $estados[$estadoAtual][$key][4];
         break;
       }
       //fim de nao aceitacao, o algorizmo esperado nao foi encontrado
