@@ -18,19 +18,22 @@
 
 				<div class="form-group">					 
                   <label for="Estados">Estados</label>
-                  <input name="Estados" class="form-control" id="Estados" placeholder="Estados">
+                  <textarea name="Estados" class="form-control" id="Estados" placeholder="Estados"></textarea>
                 </div>
 
-                <div class="form-group">
-                  <label for="FitaEntrada">FitaEntrada</label>
-                  <input name="FitaEntrada" class="form-control mb-4" id="FitaEntrada" placeholder="FitaEntrada">
-                </div>
+				<div class="row">
+                	<div class="col">
+                	  <label for="FitaEntrada">FitaEntrada</label>
+                	  <input name="FitaEntrada" class="form-control mb-4" id="FitaEntrada" placeholder="FitaEntrada">
+                	</div>
+	
+                	<div class="col">
+                	  <label for="TamanhoFita">TamanhoFita</label>
+					  <input name="TamanhoFita" class="form-control mb-4" type="number" 
+								  min="20" max="10000" step="10" value="30" id="TamanhoFita" placeholder="TamanhoFita">
+			    	</div>
+			    </div>
 
-                <div class="form-group">
-                  <label for="TamanhoFita">TamanhoFita</label>
-                  <input name="TamanhoFita" class="form-control mb-4" id="TamanhoFita" placeholder="TamanhoFita">
-                </div>
-                
 			</form>
             <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary  mb-5">Enviar</button>
 		</div>
