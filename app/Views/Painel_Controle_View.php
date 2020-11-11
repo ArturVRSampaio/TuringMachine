@@ -10,11 +10,11 @@
     <?= $this->include('Tabs/Painel_controle_top') ?>
 </div>
 
-<div class="container-fluid mt-4">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-2">
+		<div class="col-md-1">
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-10">
 			<form name="Controle" role="form" id="Controle">
 
 				<div class="form-group">					 
@@ -38,7 +38,7 @@
 			</form>
             <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary  mb-5">Enviar</button>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-1">
 		</div>
 	</div>
 </div>
