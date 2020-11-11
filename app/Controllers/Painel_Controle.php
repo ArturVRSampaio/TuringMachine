@@ -16,53 +16,77 @@ class Painel_Controle extends BaseController
         $request = service('request');
         $this->_validate();
         //teste Json
-        $Leitura_Estados= $request->getPost("Estados");
-        $Leitura_FitaEntrada= $request->getPost("FitaEntrada");
-        $Leitura_TamanhoFita= $request->getPost("TamanhoFita");
+        $Estados= $request->getPost("Estados");
+        $FitaEntrada= $request->getPost("FitaEntrada");
+        $TamanhoFita= $request->getPost("TamanhoFita");
 
-        var_dump($Leitura_Estados);
-        var_dump($Leitura_FitaEntrada);
-        var_dump($Leitura_TamanhoFita);	
-
-        echo json_encode(array("status" => TRUE));
-        return;        
-
-        ///////////////////////
-        //teste maquina
-        ///////////////////////
+        $EstadosFormatados=     $this->FormataEstados($Estados);
+        $FitaEntradaFormatada=  $this->FormataFitaEntrada($FitaEntrada);
 
         helper('Machine_helper');
-        
-        //fita entrada
-        // $fitaEntrada = array("a","b","c","a","b");
-
-
-        // array estados exemplo
-        //q0
-        // 000 -> Q0a b 2 1
-        // 010 -> Q0b a 2 1
-        // 020 -> Q0_ "" 2 -1 ->estado final
-        //q1
-        // 100 -> Q1a b 2 1
-        // 110 -> Q1b a 2 1
-        // 120 -> Q1_ "" 2 -1 ->estado final
-
-        $listaAcaoa = array("a", "b", 1, 1);
-        $listaAcaob = array("b", "a", 1, 1);
-        $listaAcaoVazio = array("", "a", 2, -1);
-
-        $listachave = array($listaAcaoa, $listaAcaob, $listaAcaoVazio);
-
-        //conjunto finito de estados
-        //lista de estados do usuario
-        $estados = array($listachave, $listachave);
-
-        // $fitaSize = 12;
-
-        master($Leitura_Estados, $Leitura_FitaEntrada, $Leitura_TamanhoFita);
-        // master($estados, $fitaEntrada, $fitaSize);
+        master($EstadosFormatados, $FitaEntradaFormatada, $TamanhoFita);
     }
 
+ 
+
+    function FormataEstados($Estados){
+
+        $EstadosFormatados=array(array());       
+        $EstadosEntrada = $Estados;
+        $EstadosEntradaExplodidos = explode(';', $EstadosEntrada);
+            
+        $PrimeiroIndice=0;
+        $SegundoIndice=0;
+        $IndiceTotalComandos =array();
+        foreach($EstadosEntradaExplodidos as $Estado){
+            $Comandos = explode(',', $Estado);
+            
+            if($Comandos[1] ===null){
+                $Comandos[1] ="";
+            }
+
+            array_push ($IndiceTotalComandos, $Comandos[0]);
+            foreach(array_count_values($IndiceTotalComandos) as $NIndiceKey => $NIndiceValue){
+                if($NIndiceKey == $Comandos[0]){
+                    $SegundoIndice=$NIndiceValue-1;
+                break;
+                }
+            }
+            $PrimeiroIndice = intval( $Comandos[0]);
+
+            if(! array_key_exists($PrimeiroIndice, $EstadosFormatados)){
+                $EstadosFormatados[]=$PrimeiroIndice;
+                $EstadosFormatados[$PrimeiroIndice]= array();
+            }
+
+            $EstadosFormatados[$PrimeiroIndice];
+            
+            array_push ($EstadosFormatados[$PrimeiroIndice], $SegundoIndice);
+            $EstadosFormatados[$PrimeiroIndice][$SegundoIndice]=array();
+            $EstadosFormatados[$PrimeiroIndice][$SegundoIndice]= $Comandos;
+        }
+        return ($EstadosFormatados);
+    }
+    
+    function FormataFitaEntrada($FitaEntrada){
+        $EstadosFitaEntradaFormatada = array();
+        $CelulasFitaEntrada = $FitaEntrada;
+        $celulas = explode(",", $CelulasFitaEntrada);
+        foreach($celulas as $celula){
+            if($celula ===null){
+                $EstadosFitaEntradaFormatada[]= "";
+            }
+            else{
+            $EstadosFitaEntradaFormatada[] = ($celula);
+            }
+        }
+
+        return ($EstadosFitaEntradaFormatada);
+    }
+
+
+
+ 
     //validacao de entrada
     private function _validate()
     {
