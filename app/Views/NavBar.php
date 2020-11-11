@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- NavBar-->
 <body class="col-md-12 clearfix">
-<div class="col-md-12">
+<div class="mw-100 p-0 m-0">
 	<div class="row">
 		<div class="col-md-12">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
