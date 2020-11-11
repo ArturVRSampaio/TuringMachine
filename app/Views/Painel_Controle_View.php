@@ -161,7 +161,7 @@ function Enviar()
         {
 			if(data.status)
             {
-				window.location.href = "<?php echo base_url();?>/saida/";
+
             }
             else
             {

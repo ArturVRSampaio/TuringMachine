@@ -33,7 +33,6 @@ $routes->setAutoRoute(true);
 
 $routes->get('/', 'Home::index');
 $routes->get('/controle', 'Painel_Controle::index');
-$routes->get('/saida', 'Saida_Controle');
 
 /**
  * --------------------------------------------------------------------
