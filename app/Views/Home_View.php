@@ -113,23 +113,24 @@
 					</footer>
 				</blockquote>
 		</div>
-<!--SEPARACAO-->
-		
 	</div>
-    <div id="menu1" class="tab-pane fade">
+<!--SEPARACAO-->
+	<div id="menu1" class="tab-pane fade">
 			<h3>Menu 1</h3>
 	      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-	
+	</div>
+<!--SEPARACAO-->	
 	<div id="menu2" class="tab-pane fade">
 	      <h3>Menu 2</h3>
 	      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
-    <div id="menu3" class="tab-pane fade">
+<!--SEPARACAO-->
+	<div id="menu3" class="tab-pane fade">
       <h3>Menu 3</h3>
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
-  </div>
+<!--SEPARACAO-->
+	</div>
 </div>
 
 
