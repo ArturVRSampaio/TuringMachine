@@ -24,25 +24,30 @@
 <div class="container">
 
   <div class="tab-content">
+  <!--TAB 1-->
     <div id="home" class="tab-pane active">
-			<div>
-			<?= $this->include('Tabs/Home') ?>
-			</div>
-      	</div>
-<!--SEPARACAO-->
-	<div id="menu1" class="tab-pane fade">
-			<h3>Menu 1</h3>
-	      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-	</div>
-<!--SEPARACAO-->	
-	<div id="menu2" class="tab-pane fade">
-	      <h3>Menu 2</h3>
-	      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		<div class= "mt-4">
+			<?= $this->include('Tabs/Tab_1') ?>
+		</div>
     </div>
-<!--SEPARACAO-->
+<!--TAB 2-->
+	<div id="menu1" class="tab-pane fade">
+		<div class= "mt-4">
+			<?= $this->include('Tabs/Tab_2') ?>
+		</div>
+			
+	</div>
+<!--TAB 3-->	
+	<div id="menu2" class="tab-pane fade">
+		<div class= "mt-4">
+			<?= $this->include('Tabs/Tab_3') ?>
+		</div>
+    </div>
+<!--TAB 4-->
 	<div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		<div class= "mt-4">
+			<?= $this->include('Tabs/Tab_4') ?>
+		</div>
     </div>
 <!--SEPARACAO-->
 	</div>

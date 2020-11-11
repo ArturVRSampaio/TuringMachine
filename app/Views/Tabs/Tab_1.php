@@ -10,8 +10,9 @@
 					Turing também se envolveu na construção de máquinas físicas para quebrar os códigos secretos das comunicações alemãs durante a Segunda Guerra Mundial, tendo utilizado alguns dos conceitos teóricos desenvolvidos para o seu modelo de computador universal.
 				</p>
 			</div>
-			<img src="https://i.imgur.com/TCmiUP7.jpg" class="w-50 rounded mb-4" alt="Responsive image">
-				
+				<div class= container>
+					<img src="https://i.imgur.com/TCmiUP7.jpg" class="w-50 rounded mb-4 mx-auto d-block" alt="Responsive image">
+				</div>	
 			<h5>
 				Descrição informal
 			</h5>
