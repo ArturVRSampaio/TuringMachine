@@ -4,7 +4,7 @@
 <?= $this->include('Base_View') ?>
 <?= $this->include('NavBar') ?>
 
-<body>
+<body class="clearfix">
 
 <ul class="nav nav-tabs md-12 d-flex justify-content-center">
 	<li class="nav-item">

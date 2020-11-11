@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small cyan darken-3 ">
+<footer class="page-footer font-small cyan darken-3 clearfix">
 
   <!-- Footer Elements -->
   <div class="container">

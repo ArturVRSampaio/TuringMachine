@@ -3,7 +3,7 @@
 
 <?= $this->include('Base_View') ?>
 <?= $this->include('NavBar') ?>
-<body>
+<body class="clearfix">
 
 <!-- CONTENT -->
 <div class= mt-4>
@@ -55,7 +55,7 @@
 					<h3>
 						Dados de entrada
 					</h3>
-                	<textarea name="Estados" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
+                	<textarea name="SaidaEntrada" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
 				</div>
 
 				
@@ -64,7 +64,7 @@
 					<h3>
 						Saida de dados
 					</h3>
-                	<textarea name="Estados" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
+                	<textarea name="SaidaEstados" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
 
 				</div>
 
