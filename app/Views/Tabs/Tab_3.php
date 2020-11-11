@@ -29,20 +29,7 @@
                 Exemplos de Máquinas
             </h5>
             <p>
-                Uma máquina pode ser construída para calcular a sequência 010101 ....
-                A máquina deve ter as quatro configurações-m "b", "c", "£", "c"
-                e é capaz de imprimir "0" e "1". O comportamento da máquina é
-                descrito na tabela a seguir, em que "R" significa "a máquina se move
-                de modo que varre o quadrado imediatamente à direita daquele onde estava
-                observando anteriormente". Da mesma forma, para" L "." E "significa" o
-                o símbolo escaneado é apagado "e" P "significa" impressões ". Esta tabela (e todos
-                sucessivas tabelas do mesmo tipo) deve ser entendido como significando que para
-                uma configuração descrita nas duas primeiras colunas, as operações na
-                terceira coluna são realizadas sucessivamente, e a máquina então passa
-                na configuração m descrita na última coluna. Quando a segunda
-                coluna é deixada em branco, entende-se que o comportamento da terceira e
-                a quarta coluna aplica-se a qualquer símbolo e a nenhum símbolo. A máquina
-                começa na configuração-m b com uma fita em branco.
+                Uma máquina pode ser construída para calcular a sequência 010101 .... A máquina deve ter as quatro configurações-m "b", "c", "£", "c" e é capaz de imprimir "0" e "1". O comportamento da máquina é descrito na tabela a seguir, em que "R" significa "a máquina se move de modo que varre o quadrado imediatamente à direita daquele onde estava observando anteriormente". Da mesma forma, para" L "." E "significa" o o símbolo escaneado é apagado "e" P "significa" impressões ". Esta tabela (e todas sucessivas tabelas do mesmo tipo) deve ser entendida como significando que para uma configuração descrita nas duas primeiras colunas, as operações na terceira coluna são realizadas sucessivamente, e a máquina então passa na configuração m descrita na última coluna. Quando a segunda coluna é deixada em branco, entende-se que o comportamento da terceira e a quarta coluna aplica-se a qualquer símbolo e a nenhum símbolo. A máquina começa na configuração-m b com uma fita em branco.
             </p>
             <img src="https://i.imgur.com/eIKw3cB.png" class="w-50 rounded mb-4 mt-4 mx-auto d-block" alt="Responsive image">
             <p>
