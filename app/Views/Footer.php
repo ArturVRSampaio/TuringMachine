@@ -8,7 +8,7 @@
     <div class="row">
 
       <!-- Grid column -->
-      <div class="col-md-20 ">
+      <div class="col-md-12 ">
         <div class="mb-5 flex-center">
 
           <!-- Github -->
