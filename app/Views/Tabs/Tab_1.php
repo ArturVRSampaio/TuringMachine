@@ -1,41 +1,5 @@
 <div>
 			<h3 class= "mb-4">
-				Máquina de Turing
-			</h3>
-			<div class="mb-2">
-				<p>
-					A Máquina de Turing é um dispositivo teórico conhecido como máquina universal, que foi concebido pelo matemático britânico Alan Turing (1912-1954), muitos anos antes de existirem os modernos computadores digitais (o artigo de referência foi publicado em 1936). Num sentido preciso, é um modelo abstrato de um computador, que se restringe apenas aos aspectos lógicos do seu funcionamento (memória, estados e transições), e não a sua implementação física. Numa máquina de Turing pode-se modelar qualquer computador digital.
-				</p>
-				<p>
-					Turing também se envolveu na construção de máquinas físicas para quebrar os códigos secretos das comunicações alemãs durante a Segunda Guerra Mundial, tendo utilizado alguns dos conceitos teóricos desenvolvidos para o seu modelo de computador universal.
-				</p>
-			</div>
-				<div class= container>
-					<img src="https://i.imgur.com/TCmiUP7.jpg" class="w-50 rounded mb-4 mx-auto d-block" alt="Responsive image">
-				</div>	
-			<h5>
-				Descrição informal
-			</h5>
-			<div>
-				<p>
-					Uma máquina de Turing consiste em:
-					<ul class="list-inline">
-						<li class="ml-4">1. Uma fita que é dividida em células, uma adjacente à outra. Cada célula contém um símbolo de algum alfabeto finito. O alfabeto contém um símbolo especial branco (aqui escrito como ¬) e um ou mais símbolos adicionais. Assume-se que a fita é arbitrariamente extensível para a esquerda e para a direita, isto é, a máquina de Turing possui tanta fita quanto é necessário para a computação. Assume-se também que células que ainda não foram escritas estão preenchidas com o símbolo branco.</li>
-						<br>
-						<li class="ml-4">2. Um cabeçote, que pode ler e escrever símbolos na fita e mover-se para a esquerda ou para a direita.</li>
-						<br>
-						<li class="ml-4">3. Um registrador de estados, que armazena o estado da máquina de Turing. O número de estados diferentes é sempre finito e há um estado especial denominado estado inicial com o qual o registrador de estado é inicializado.</li>
-						<br>
-						<li class="ml-4">4. Uma tabela de ação (ou função de transição) que diz à máquina que símbolo escrever, como mover o cabeçote (para esquerda e para a direita) e qual será seu novo estado, dados o símbolo que ele acabou de ler na fita e o estado em que se encontra. Se não houver entrada alguma na tabela para a combinação atual de símbolo e estado então a máquina para.</li>
-					</ul>
-					<p>
-						Note que cada parte da máquina é finita e sua quantidade de fita potencialmente ilimitada dá uma quantidade ilimitada de espaço de memória.
-					</p>
-				</div>
-				<a class="btn" target="_blank" href="https://pt.wikipedia.org/wiki/M%C3%A1quina_de_Turing">Link de Referência »</a>
-			</p>
-
-			<h3 class= "mb-4">
 					Descrição técnica
 				</h3>
 					
@@ -58,32 +22,4 @@
 			Definições na literatura às vezes diferem um pouco, para tornar argumentos ou provas mais fáceis ou mais claras, mas isto é sempre feito de maneira que a máquina resultante tem o mesmo poder computacional. Por exemplo, mudar o conjunto <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e79e640083498f25c054489067b6deb5a1278d8b"> para <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8d391723e68afd5ea0074ac7eda41a0a2b30f387">, onde P permite ao cabeçote permanecer na mesma célula da fita em vez de mover-se para a esquerda ou direita, não aumenta o poder computacional da máquina, pois é possível simular o movimento P com o movimento sequenciado de <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c0fb4bce772117bbaf55b7ca1539ceff9ae218c">  e <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/53e574cc3aa5b4bf5f3f5906caf121a378eef08b">  o que mantém o cabeçote no mesmo lugar.
 			</p>
 
-		</div>
-
-		 <!--SEPARACAO-->
-		<div>
-			<h3 class= "mb-4">
-					Alan Turing
-				</h3>
-				<img src="https://i.imgur.com/HTGuASO.png" class="w-25 rounded float-left mr-4" alt="Responsive image">
-				<p>
-				Alan Mathison Turing, o criador da Máquina de Turing foi um matemático, cientista da computação, lógico , criptoanalista, filósofo, e biólogo teórico inglês. Foi influente no desenvolvimento da ciência da computação e na formalização do conceito de algoritmo e computação com a máquina de Turing, desempenhando um papel importante na criação do computador moderno. Foi também pioneiro na inteligência artificial e na ciência da computação. É conhecido como o pai da computação.
-				</p>
-				<p>
-				Aos 24 anos, consagrou-se com a projeção de uma máquina que, de acordo com um sistema formal, pudesse fazer operações computacionais. Mostrou como um simples sistema automático poderia manipular símbolos de um sistema de regras próprias. A máquina teórica de Turing pode indicar que sistemas poderosos poderiam ser construídos. Tornou possível o processamento de símbolos, ligando a abstração de sistemas cognitivos e a realidade concreta dos números. Isto é buscado até hoje por pesquisadores de sistemas com Inteligência Artificial (IA).
-				</p>
-				<p>
-					<a class="btn" target="_blank" href="https://pt.wikipedia.org/wiki/Alan_Turing">Mais sobre »</a>
-				</p>
-				<blockquote class="blockquote">
-					<p class="mb-2">
-					“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”
-					<br>
-					<br>
-					“Às vezes são as pessoas que ninguém imaginam que fazem as coisas que ninguém pode imaginar.”
-					</p>
-					<footer class="blockquote-footer">
-						Alan Turing
-					</footer>
-				</blockquote>
-		    </div>
+</div>

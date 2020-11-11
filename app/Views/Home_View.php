@@ -11,10 +11,10 @@
 		<a class="nav-link active" data-toggle="tab" href="#home">Home</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" data-toggle="tab" href="#menu1">menu1</a>
+		<a class="nav-link" data-toggle="tab" href="#menu1">Turing e sua Máquina</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" data-toggle="tab" href="#menu2">menu2</a>
+		<a class="nav-link" data-toggle="tab" href="#menu2">A Matemática</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link" data-toggle="tab" href="#menu3">menu3</a>
