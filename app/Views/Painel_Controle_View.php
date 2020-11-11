@@ -51,6 +51,13 @@
 		<div class="col-md-10">
 			<div class="row">
 				
+				<div class="col-md-6 mt-5">
+					<h3>
+						Dados de entrada
+					</h3>
+                	<textarea name="Estados" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
+				</div>
+
 				
 				<div class="col-md-6 mt-5">
 
@@ -61,16 +68,6 @@
 
 				</div>
 
-
-
-				<div class="col-md-6 mt-5">
-					<h3>
-						Dados de entrada
-					</h3>
-                	<textarea name="Estados" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
-				</div>
-			
-			
 			</div>
 		</div>
 		<div class="col-md-1">
