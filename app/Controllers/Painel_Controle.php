@@ -14,6 +14,7 @@ class Painel_Controle extends BaseController
 
     function Controle() {
         $request = service('request');
+        $this->_validate();
         //teste Json
         $Leitura_Estados= $request->getPost("Estados");
         $Leitura_FitaEntrada= $request->getPost("FitaEntrada");
@@ -62,6 +63,33 @@ class Painel_Controle extends BaseController
         // master($estados, $fitaEntrada, $fitaSize);
     }
 
-	//--------------------------------------------------------------------
+    //validacao de entrada
+    private function _validate()
+    {
+        $validation =  \Config\Services::validation();
+
+        
+        $validation->setRules([
+            'Estados' =>     'required',
+            'FitaEntrada' => 'required',
+            'TamanhoFita' => 'required|numeric|max_length[5]'
+        ]);
+
+        
+        if (!$validation->withRequest($this->request)->run())
+        {
+            $data['inputerror'] = array();
+            $data['error_string'] = array();
+            $data['status'] = FALSE;
+            foreach( $validation->getErrors() as $key => $val )
+            {
+                $data['inputerror'][] = $key;
+                $data['error_string'][] = $val;
+            }
+            header('Content-Type: application/json');
+            echo json_encode($data);
+            exit();
+        }
+    }
 
 }

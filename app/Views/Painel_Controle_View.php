@@ -20,18 +20,21 @@
 				<div class="form-group">					 
                   <label for="Estados">Estados</label>
                   <textarea name="Estados" class="form-control" id="Estados" placeholder="Estados"></textarea>
-                </div>
+				  <span class="help-block"></span>
+				</div>
 
 				<div class="row">
                 	<div class="col md-5 col-xs-12">
                 	  <label for="FitaEntrada">FitaEntrada</label>
                 	  <input name="FitaEntrada" class="form-control" id="FitaEntrada" placeholder="FitaEntrada">
-                	</div>
+					  <span class="help-block"></span>
+					</div>
 	
                 	<div class="col-md-5 col-xs-12">
                 	  <label for="TamanhoFita">TamanhoFita</label>
 					  <input name="TamanhoFita" class="form-control" type="number" 
 								  min="20" max="10000" step="10" value="30" id="TamanhoFita" placeholder="TamanhoFita">
+						<span class="help-block"></span>
 			    	</div>
 			    </div>
 
