@@ -41,8 +41,12 @@ class Painel_Controle extends BaseController
         foreach($EstadosEntradaExplodidos as $Estado){
             $Comandos = explode(',', $Estado);
             
-            if($Comandos[1] ===null){
+            if($Comandos[1] ==="null"){
                 $Comandos[1] ="";
+            }
+            
+            if($Comandos[2] ==="null"){
+                $Comandos[2] ="";
             }
 
             array_push ($IndiceTotalComandos, $Comandos[0]);
