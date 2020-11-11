@@ -39,7 +39,7 @@
 			    </div>
 
 			</form>
-            <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary  mb-5">Enviar</button>
+            <button type="button" id="btnEnviar" onclick="Enviar()" class="btn btn-primary  mb-5 mt-4">Enviar</button>
 		</div>
 		<div class="col-md-1">
 		</div>
