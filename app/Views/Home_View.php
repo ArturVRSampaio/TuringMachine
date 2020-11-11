@@ -6,7 +6,7 @@
 
 <body class="clearfix">
 
-<ul class="nav nav-tabs md-12 d-flex justify-content-center">
+<ul class="nav nav-tabs md-20 d-flex justify-content-center">
 	<li class="nav-item">
 		<a class="nav-link active" data-toggle="tab" href="#home">Home</a>
 	</li>
