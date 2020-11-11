@@ -17,7 +17,7 @@
 		<a class="nav-link" data-toggle="tab" href="#menu2">A Matemática</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" data-toggle="tab" href="#menu3">menu3</a>
+		<a class="nav-link" data-toggle="tab" href="#menu3">Tutorial</a>
 	</li>
 </ul>
 
