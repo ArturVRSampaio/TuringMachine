@@ -73,11 +73,11 @@ class Painel_Controle extends BaseController
         $CelulasFitaEntrada = $FitaEntrada;
         $celulas = explode(",", $CelulasFitaEntrada);
         foreach($celulas as $celula){
-            if($celula ===null){
+            if($celula ==="null"){
                 $EstadosFitaEntradaFormatada[]= "";
             }
             else{
-            $EstadosFitaEntradaFormatada[] = ($celula);
+                $EstadosFitaEntradaFormatada[] = ($celula);
             }
         }
 
