@@ -1,5 +1,6 @@
 <?php
 function master($estados, $fitaEntrada, $fitaSize){
+  $fitaAlteracoes= array();
 
   $fita=array_fill(0, $fitaSize, '');
     
@@ -20,6 +21,7 @@ function master($estados, $fitaEntrada, $fitaSize){
   $aceita = False;
   $estadoAtual = 0;
   $fim = false;
+  array_push($fitaAlteracoes, $fita);
   while($fim!= true){
     
     //verificando se eh o estado final
@@ -44,16 +46,16 @@ function master($estados, $fitaEntrada, $fitaSize){
 
         //mudando estado
         $estadoAtual = $estados[$estadoAtual][$key][4];
+        array_push($fitaAlteracoes, $fita);
         break;
       }
       //fim de nao aceitacao, o algorizmo esperado nao foi encontrado
       elseif(sizeof($estados[$estadoAtual])-1== $key){
         $fim=true;
         $aceita=false;
+        break;
       }
-
-
     }  
   };
-  var_dump($fita);
+  return ([$fitaAlteracoes, $aceita]);
 }

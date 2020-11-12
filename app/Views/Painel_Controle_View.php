@@ -47,27 +47,22 @@
 </div>
 
 
-<div class="container-fluid mb-4">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
 			<div class="row">
-				
-				<div class="col-md-6 mt-5">
-					<h3>
-						Dados de entrada
-					</h3>
-                	<textarea name="SaidaEntrada" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
-				</div>
+							
+				<div class="col-md-12 mt-5">
 
-				
-				<div class="col-md-6 mt-5">
-
-					<h3>
-						Saida de dados
-					</h3>
-                	<textarea name="SaidaEstados" class="form-control" id="Estados" placeholder="Estados" disabled></textarea>
+					<div class="float-center">				
+						<h3>Saida de dados</h3>
+					</div>
+					<div class="float-right">
+						<input id="SaidaAceita" type="checkbox" checked data-toggle="toggle" data-on="aceita" data-off="Nao Aceita" data-onstyle="success" data-offstyle="danger">
+					</div>
+					<textarea name="SaidaDados" class="form-control" id="SaidaDados" placeholder="SaidaDados" disabled></textarea>
 
 				</div>
 
@@ -103,7 +98,17 @@ function Enviar()
         {
 			if(data.status)
             {
+				fita ="";
+				for (var x in data[0][0]){
+					fita +=data[0][0][x]
+					fita +='\n'
+				}
+				
+				$('[name="SaidaDados"]').val(fita);
 
+				//document.getElementById("SaidaAceita").disabled = false ;
+				document.getElementById("SaidaAceita").checked = false ;
+				//document.getElementById("SaidaAceita").disabled = true ;
             }
             else
             {
@@ -143,9 +148,6 @@ function Enviar()
         }
     });
 }
-
-
-
 
 
 </script>

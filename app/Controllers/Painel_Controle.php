@@ -24,7 +24,9 @@ class Painel_Controle extends BaseController
         $FitaEntradaFormatada=  $this->FormataFitaEntrada($FitaEntrada);
 
         helper('Machine_helper');
-        master($EstadosFormatados, $FitaEntradaFormatada, $TamanhoFita);
+        
+        header('Content-Type: application/json');
+        echo json_encode(["status" => TRUE,master($EstadosFormatados, $FitaEntradaFormatada, $TamanhoFita)]);
     }
 
  
