@@ -22,9 +22,18 @@
 
           <b>5.Próximo estado:</b>
           Indica qual será o próximo estado da máquina.<br><br>
-
+          <div> 
           Este pequeno video mostra o funcionamento da máquina tendo como a fita [0,0]<br>
+          <p>Tendo como os estados:</p>
+          <p>
+          [0  0  A  1  0]<br>
+          [0  ∅  ∅ -1  1]<br><br>
 
-          <iframe src='https://gfycat.com/ifr/MeanBlueKid' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe>
+          [1  A  B  -1  1]<br>
+          [1  ∅  ∅  0  -1]<br>
+          </p>
+
+          <iframe src='https://gfycat.com/ifr/MeanBlueKid' frameborder='0' scrolling='yes' allowfullscreen width='640' height='404'></iframe>
+          </div>
       </div>
 </div>
