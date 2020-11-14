@@ -3,10 +3,6 @@ use CodeIgniter\HTTP\IncomingRequest;
 
 class Painel_Controle extends BaseController
 {
-    function __construct() {
-    }
-
-
     public function index()
 	{
         return view('Painel_Controle_View.php');
@@ -22,7 +18,8 @@ class Painel_Controle extends BaseController
 
         $EstadosFormatados=     $this->FormataEstados($Estados);
         $FitaEntradaFormatada=  $this->FormataFitaEntrada($FitaEntrada);
-
+        //var_dump($EstadosFormatados);
+        //return
         helper('Machine_helper');
         
         header('Content-Type: application/json');
@@ -35,13 +32,19 @@ class Painel_Controle extends BaseController
 
         $EstadosFormatados=array(array());       
         $EstadosEntrada = $Estados;
-        $EstadosEntradaExplodidos = explode(';', $EstadosEntrada);
-            
+
+        //separando cada uma das linhas de comandos
+        $EstadosEntradaExplodidos = explode(PHP_EOL, $EstadosEntrada);
+        $EstadosEntradaExplodidos =str_replace("\r","",$EstadosEntradaExplodidos);
+        
+        //definindo valores iniciais do loop
         $PrimeiroIndice=0;
         $SegundoIndice=0;
         $IndiceTotalComandos =array();
+
+        //loop de execucao de codigo
         foreach($EstadosEntradaExplodidos as $Estado){
-            $Comandos = explode(',', $Estado);
+            $Comandos = explode(' ', $Estado);
             
             if($Comandos[1] ==="null"){
                 $Comandos[1] ="";
