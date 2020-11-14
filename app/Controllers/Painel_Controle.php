@@ -18,8 +18,6 @@ class Painel_Controle extends BaseController
 
         $EstadosFormatados=     $this->FormataEstados($Estados);
         $FitaEntradaFormatada=  $this->FormataFitaEntrada($FitaEntrada);
-        //var_dump($EstadosFormatados);
-        //return
         helper('Machine_helper');
         
         header('Content-Type: application/json');
