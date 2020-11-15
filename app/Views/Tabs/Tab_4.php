@@ -25,6 +25,9 @@
 
           Este pequeno video mostra o funcionamento da máquina tendo como a fita [0,0]<br>
 
-          <iframe src='https://gfycat.com/ifr/MeanBlueKid' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe>
+            <!-- 4:3 aspect ratio -->
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe src='https://gfycat.com/ifr/MeanBlueKid' ></iframe>
+            </div>
       </div>
 </div>
