@@ -27,14 +27,14 @@
           <p>Tendo como os estados:</p>
           <p>
           [0  0  A  1  0]<br>
-          [0  ∅  ∅ -1  1]<br><br>
+          [0  null  null -1  1]<br><br>
 
           [1  A  B  -1  1]<br>
-          [1  ∅  ∅  0  -1]<br>
+          [1  null  null  0  -1]<br>
           </p>
             <!-- 4:3 aspect ratio -->
             <div class="embed-responsive embed-responsive-4by3">
-                <iframe src='https://gfycat.com/ifr/MeanBlueKid' ></iframe>
+                <iframe src='https://gfycat.com/ifr/MeanBlueKid'></iframe>
             </div>
       </div>
 </div>
