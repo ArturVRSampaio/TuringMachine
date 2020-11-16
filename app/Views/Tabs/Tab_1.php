@@ -15,7 +15,7 @@
 
             <br>
             <br>
-                Tudo neste nesta aplicação é de código aberto e está disponível a todos pelo GitHub, com os respectivos
+                Tudo nesta aplicação é de código aberto e está disponível a todos pelo GitHub, com os respectivos
                 links no rodapé de todas as abas da aplicação.
 
             <br>
